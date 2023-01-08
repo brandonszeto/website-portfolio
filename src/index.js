@@ -8,7 +8,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <div class="EntirePage">
         <div class="ContentContainer">
-            <h1>Jenny</h1>
+            <h1>Brandon</h1>
+            <h1>Szeto's</h1>
+            <h1>Website</h1>
             <Experiences />
             <Projects />
         </div>
