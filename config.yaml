@@ -102,8 +102,8 @@ params:
   navbar:
     align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
     # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
-    # showBrandLogo: false # Show brand logo in nav bar | default is true
-    brandName: "Hugo Profile" # Brand name for the brand | default is the title variable
+    showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "Brandon Szeto" # Brand name for the brand | default is the title variable
     disableSearch: true
     # searchPlaceholder: "Search"
     menus:
@@ -247,6 +247,45 @@ params:
           - icon: fab fa-github
             url: https://github.com/brandonszeto/CSE-141L 
 
+      - title: Search Algorithm Visualization
+        content: Visualization of depth-first search, breadth-first search, uniform-cost search (Dijkstra's), and A* search (using Manhattan Distance as the heuristic). The goal is to find a path between a start and goal node.
+        image: /images/projects/astar.jpg
+        featured:
+          name: Code Available Upon Request
+          link: https://github.com/brandonszeto/CSE-150B/pa1
+          badges:
+          - "Python"
+          - "Pygame"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/brandonszeto/CSE-150B/pa1
+
+      - title: 2048 AI Agent
+        content: An AI agent implemented using a depth-3 game tree and the expectimax algorithm. Heuristics weigh in favor of larger tiles on the edge and less tiles overall.
+        image: /images/projects/2048.jpg
+        featured:
+          name: Code Available Upon Request
+          link: https://github.com/brandonszeto/CSE-150B/pa2
+          badges:
+          - "Python"
+          - "Pygame"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/brandonszeto/CSE-150B/pa2
+
+      - title: Blackjack Evaluation
+        content: Implementation of Monte Carlo Policy Evaluation, Temporal-Difference Policy Evaluation, and Q-Learning algorithms to determine player actions. Tested using deterministic and convergence tests (over one million steps).
+        image: /images/projects/blackjack.jpg
+        featured:
+          name: Code Available Upon Request
+          link: https://github.com/brandonszeto/CSE-150B/pa3
+          badges:
+          - "Python"
+          - "Pygame"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/brandonszeto/CSE-150B/pa3
+
       - title: Gomoku AI Agent
         content: An AI agent using Monte Carlo Tree Search to play Gomoku against a human player. Adjustable computation budget. Wins 100% of games against an agent using random policy.
         image: /images/projects/gomoku.jpg
@@ -260,20 +299,18 @@ params:
           - icon: fab fa-github
             url: https://github.com/brandonszeto/CSE-150B/pa4
 
-      - title: Hugo Profile V2
-        content: A clean and simple Hugo template for personal portfolio and blog.
-        image: /images/projects/profile2.jpg
+      - title: Sudoku Solver
+        content: Implementation of sudoku constraint solver. Decisions are based on propagation and search algorithms to backtrack when an incorrect decision is made, and terminate when no solution exists.
+        image: /images/projects/sudoku.jpg
         featured:
-          name: Demo V2
-          link: https://hugo-profile-2.netlify.app
-        badges:
-          - "Hugo"
-          - "Bootstrap"
-          - "Javascript"
+          name: Code Available Upon Request
+          link: https://github.com/brandonszeto/CSE-150B/pa5
+          badges:
+          - "Python"
+          - "Pygame"
         links:
           - icon: fab fa-github
-            url: https://github.com/brandonszeto
-
+            url: https://github.com/brandonszeto/CSE-150B/pa5
 
   #Contact
   contact:
