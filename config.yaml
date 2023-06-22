@@ -1,7 +1,6 @@
 baseURL: "https://brandonszeto.com"
 languageCode: "en-us"
 title: "Brandon Szeto"
-theme: hugo-profile
 
 outputs:
   home:
