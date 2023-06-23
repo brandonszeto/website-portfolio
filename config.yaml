@@ -62,11 +62,6 @@ params:
   # Note the lack of "" in true, it should be of boolean type.
   useBootstrapCDN: false
 
-  # If you want to load dynamically responsive images from Cloudinary
-  # This requires your images to be uploaded + hosted on Cloudinary
-  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
-  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
-
   # Whether the fade animations on the home page will be enabled
   animate: true
 
@@ -252,7 +247,7 @@ params:
         featured:
           name: Code Available Upon Request
           link: https://github.com/brandonszeto/CSE-150B/pa1
-          badges:
+        badges:
           - "Python"
           - "Pygame"
         links:
@@ -265,7 +260,7 @@ params:
         featured:
           name: Code Available Upon Request
           link: https://github.com/brandonszeto/CSE-150B/pa2
-          badges:
+        badges:
           - "Python"
           - "Pygame"
         links:
@@ -278,7 +273,7 @@ params:
         featured:
           name: Code Available Upon Request
           link: https://github.com/brandonszeto/CSE-150B/pa3
-          badges:
+        badges:
           - "Python"
           - "Pygame"
         links:
@@ -291,7 +286,7 @@ params:
         featured:
           name: Code Available Upon Request
           link: https://github.com/brandonszeto/CSE-150B/pa4
-          badges:
+        badges:
           - "Python"
           - "Pygame"
         links:
@@ -304,7 +299,7 @@ params:
         featured:
           name: Code Available Upon Request
           link: https://github.com/brandonszeto/CSE-150B/pa5
-          badges:
+        badges:
           - "Python"
           - "Pygame"
         links:
