@@ -2,35 +2,28 @@
 <html>
 
 <head>
-  {{- partial "head.html" . -}}
-  {{- block "head" . }} {{- end }}
-  <title>
-    {{- block "title" . }} {{- end }}
-  </title>
+    <!-- Header config -->
+    {{- partial "head.html" . -}}
+
+    {{- block "head" . }} {{- end }}
+
+    <title>
+        {{- block "title" . }} {{- end }}
+    </title>
 </head>
 
-<body class="light">
-  <!-- javascripts -->
-  <!-- <script src="/js/jquery-3.6.0.min.js"></script> -->
+<body>
+    <!-- Navbar config -->
+    {{- partial "sections/navbar.html" . -}}
 
-  {{- partial "sections/header.html" . -}}
-  <div id="content">
-    {{- block "main" . }}{{- end }}
-  </div>
-  {{- partial "sections/footer/index.html" . -}}
+    <div class="content">
+    {{ block "main" . }}{{ end }}
+    </div>
 
-  {{- if (or (eq .Site.Params.UseBootstrapCDN true) (eq .Site.Params.UseBootstrapCDN "js")) -}}
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-  {{- else -}}
-  <script src="{{ .Site.Params.staticPath }}/bootstrap-5/js/bootstrap.bundle.min.js"></script>
-  {{- end -}}
+    <script src="{{ .Site.Params.staticPath }}/bootstrap-5/js/bootstrap.bundle.min.js"></script>
 
-  {{- partial "scripts.html" . -}}
-
-  <!-- for search -->
-  <section id="search-content" class="py-2">
-    <div class="container" id="search-results"></div>
-  </section>
+    <!-- Scripts -->
+    {{- partial "scripts.html" . -}}
 </body>
 
 </html>

@@ -1,0 +1,107 @@
+baseURL = 'http://brandonszeto.com/'
+languageCode = 'en-us'
+title = 'Brandon Szeto'
+
+[menus]
+
+[params.settings]
+title = "Brandon Szeto"
+description = "My personal website"
+# staticPath = "" # The path to serve static files from
+favicon = "/images/fav.png"
+
+# Enable each section
+enableHero = true
+enableAbout = true
+enableExperience = true
+enableResearch = true
+enableAchievements = true
+enableProjects = true
+enableBlog = true
+enableGallery = true
+
+[params.settings.font]
+fontSize = "1rem"
+fontWeight = "400"
+lineHeight = "1.5"
+textAlign = "left"
+
+[params.settings.theme]
+defaultTheme = "light" # dark
+# disableThemeToggle = false
+
+# Navbar Settings
+[params.navbar]
+disableName = false
+
+# Remove the following buttons from the navbar
+enableAbout = false
+enableExperience = false
+enableResearch = false
+enableAchievements = false
+enableProjects = false
+enableBlog = true
+enableGallery = true 
+enableContact = true 
+
+# Settings for hero section
+[params.settings.hero]
+buttonEnable = true
+buttonName = "Contact"
+email = "brandonszeto@gmail.com"
+
+[[params.content.hero.socialLinks]]
+url = "https://github.com/brandonszeto"
+icon = "fab fa-github-alt"
+
+[[params.content.hero.socialLinks]]
+url = "https://linkedin.com/in/brandon-szeto"
+icon = "fab fa-linkedin-in"
+
+# All page content
+[params.content]
+# Content for hero section
+[params.content.hero]
+intro = "Hi 👋, my name is"
+title = "Brandon Szeto."
+blurb = "I am a student at [UCSD](https://ucsd.edu) double majoring in computer engineering and statistics. I have experience in programming, hardware design, and web development."
+
+[params.color]
+textColor = "#343a40"
+secondaryTextColor = "#6c757d"
+backgroundColor = "#eaedf0"
+secondaryBackgroundColor = "#64ffda1a"
+primaryColor = "#007bff"
+# primaryColor = "#ff5b77"
+secondaryColor = "#f8f9fa"
+
+[params.darkmode]
+textColor = "#e4e6eb"
+secondaryTextColor = "#b0b3b8"
+backgroundColor = "#18191a"
+secondaryBackgroundColor = "#212529"
+primaryColor = "#ffffff"
+secondaryColor = "#212529"
+
+[params.content.about]
+title = "About Me"
+enable = true
+image = "/images/me.png"
+text = "Hi, my name is Brandon and I'm currently studying computer engineering and statistics at [UCSD](https://ucsd.edu). I have always been interested in the applications of technology. Recently, I have taken interest in the field of machine learning and the mathematics that drive decisions in the real-world."
+enableSkills = true
+skillsTitle = "Here are a few technologies I've been working with recently:"
+skillsItems = ["OpenCV", "Verilog HDL", "PyTorch", "Python", "C++"]
+
+[params.content.experience]
+enable = true
+title = "What I've done"
+
+[params.content.projects]
+enable = true
+title = "Projects"
+
+[params.content.contact]
+enable = true
+text = "I'm currently looking for opportunities in computer science, engineering, and data science. Whether you have a question or just want to say hi, I'll try my best to get back to you!"
+title = "Get in touch"
+buttonName = "Contact"

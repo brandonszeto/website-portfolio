@@ -1,0 +1,113 @@
+<!-- Navbar -->
+<header>
+    <!-- Navbar stylesheet -->
+    <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/navbar.css" media="all">
+
+    <!-- Navbar structure -->
+    <nav class="pt-2 navbar navbar-expand-sm animate">
+        <div class="container-fluid mx-xs-0 mx-sm-0 mx-md-0 mx-lg-0">
+            <!-- Navbar Logo + Name -->
+            <a class="navbar-brand primary-font text-wrap nav-link" href="{{ .Site.BaseURL}}">
+                <img src="{{ .Site.Params.settings.favicon }}" width="40"
+                height="40" class="d-inline-block align-top">
+                {{ if (.Site.Params.navbar.enableName | default true) }}
+                {{ .Title }}
+                {{ end }}
+            </a>
+
+            <!-- navbar toggler -->
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <svg id="menuButton" aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1"
+                id="offcanvasNavbar" style="width: 60%;">
+                <div class="offcanvas-body">
+                    <ol class="navbar-nav ms-auto flex=grow-1 pe-3">
+                        <!-- About -->
+                        {{ if (.Site.Params.navbar.enableAbout | default true) }}
+                        <li class="nav-item navbar-text">
+                            <a class="nav-link" href="{{ .Site.BaseURL }}#about"
+                                aria-label="about">
+                                {{ .Site.Params.about.title | default "About" }}
+                            </a>
+                        </li>
+                        {{ end }}
+
+                        <!-- Experience -->
+                        {{ if (.Site.Params.navbar.enableExperience | default true) }}
+                        <li class="nav-item navbar-text">
+                            <a class="nav-link" href="{{ .Site.BaseURL }}#experience"
+                                aria-label="experience">
+                                {{ .Site.Params.experience.title | default "Experience" }}
+                            </a>
+                        </li>
+                        {{ end }}
+                        
+                        <!-- Research -->
+                        {{ if (.Site.Params.navbar.enableResearch | default true) }}
+                        <li class="nav-item navbar-text">
+                            <a class="nav-link" href="{{ .Site.BaseURL }}#research"
+                                aria-label="research">
+                                {{ .Site.Params.research.title | default "Research" }}
+                            </a>
+                        </li>
+                        {{ end }}
+
+                        <!-- Achievements -->
+                        {{ if (.Site.Params.navbar.enableAchievements | default true) }}
+                        <li class="nav-item navbar-text">
+                            <a class="nav-link" href="{{ .Site.BaseURL }}#achievements"
+                                aria-label="achievements">
+                                {{ .Site.Params.achievements.title | default "Achievements" }}
+                            </a>
+                        </li>
+                        {{ end }}
+
+                        <!-- Projects -->
+                        {{ if (.Site.Params.navbar.enableProjects | default true) }}
+                        <li class="nav-item navbar-text">
+                            <a class="nav-link" href="{{ .Site.BaseURL }}#projects"
+                                aria-label="projects">
+                                {{ .Site.Params.projects.title | default "Projects" }}
+                            </a>
+                        </li>
+                        {{ end }}
+
+                        <!-- Blog -->
+                        {{ if (.Site.Params.navbar.enableBlog | default true) }}
+                        <li class="nav-item navbar-text">
+                            <a class="nav-link" href="{{ .Site.BaseURL }}#blog"
+                                aria-label="blog">
+                                {{ .Site.Params.blog.title | default "Blog" }}
+                            </a>
+                        </li>
+                        {{ end }}
+
+                        <!-- Gallery -->
+                        {{ if (.Site.Params.navbar.enableGallery | default true) }}
+                        <li class="nav-item navbar-text">
+                            <a class="nav-link" href="{{ .Site.BaseURL }}#gallery"
+                                aria-label="gallery">
+                                {{ .Site.Params.gallery.title | default "Gallery" }}
+                            </a>
+                        </li>
+                        {{ end }}
+
+                        <!-- Contact -->
+                        {{ if (.Site.Params.navbar.enableContact | default true) }}
+                        <li class="nav-item navbar-text">
+                            <a class="nav-link" href="{{ .Site.BaseURL }}#contact"
+                                aria-label="contact">
+                                {{ .Site.Params.contact.title | default "Contact" }}
+                            </a>
+                        </li>
+                        {{ end }}
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

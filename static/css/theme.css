@@ -1,47 +1,19 @@
-/* light mode */
-.light > *{
-    background-color: var(--background-color) !important;
-    color: var(--text-color) !important;
+h2 {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-/* dark mode */
-.dark {
-    --background-color: var(--background-color-dark) !important;
-    --secondary-background-color: var(--secondary-background-color-dark) !important;
-    --text-color: var(--text-color-dark) !important;
-    --text-secondary-color: var(--text-secondary-color-dark) !important;
-    --primary-color: var(--primary-color-dark);
-    --secondary-color: var(--secondary-color-dark);
-}
-
-.text-secondary {
-    color: var(--text-secondary-color) !important;
-}
-
-#theme-toggle:focus {
-    outline: 0;
-}
-
-#theme-toggle svg {
-    height: 18px;
-}
-
-button#theme-toggle {
-    border: none;
-    font-size: 26px;
-    margin: auto 4px;
-}
-
-body.dark #moon {
-    vertical-align: middle;
-    display: none;
-}
-
-body:not(.dark) #sun {
-    display: none;
-}
-
-body *::selection {
-    color: var(--text-color) !important;
-    background-color: var(--primary-color) !important;
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }

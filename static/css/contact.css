@@ -1,0 +1,33 @@
+#contact {
+    height: 100vh;
+}
+
+#contact a.btn {
+    color: var(--primary-color) !important;
+    margin-top: 50px;
+    padding: 0.7rem 1.75rem;
+    border: 1px solid var(--primary-color);
+    border-radius: .75rem;
+    transition: none;
+}
+
+#contact a.btn:focus {
+    box-shadow: none;
+}
+
+#contact a.btn:hover {
+    background-color: var(--secondary-color) !important;
+    color: var(--text-color) !important;
+    opacity: 0.9;
+}
+
+#contact h3 {
+    color: var(--primary-color);
+    font-size: clamp(20px, 6vw, 30px);
+    font-weight: bold;
+}
+
+#contact .text {
+    color: var(--text-color) !important;
+    font-size: clamp(12px, 5vw, 16px);
+}

@@ -1,0 +1,33 @@
+#experience h3 {
+    display: flex;
+    -webkit-box-align: center;
+    position: relative;
+    align-items: center;
+    color: var(--primary-color) !important;
+    font-size: clamp(20px, 6vw, 30px);
+    font-weight: bold;
+    width: 100%;
+    white-space: nowrap;
+}
+
+#experience h3::before {
+    position: relative;
+    counter-increment: section 2;
+    content: "0" counter(section) ".";
+    font-size: clamp(20px, 6vw, 30px);
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+#experience h3::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -5px;
+  width: 100%;
+  height: 1px;
+  margin-left: 20px;
+  background-color: var(--primary-color);
+}
+
+

@@ -1,0 +1,43 @@
+<!-- Hero Page -->
+{{ if .Site.Params.settings.enableHero }}
+<section id="hero" class="d-flex align-items-center justify-content-center">
+    <div class="col-8 content animate" id="primary-font">
+        <span class="hello">
+            {{ .Site.Params.content.hero.intro }}
+        </span>
+        <h2 class="name">
+            {{ .Site.Params.content.hero.title }}
+        </h2>
+        <p class="blurb">
+            {{ .Site.Params.content.hero.blurb | markdownify }}
+        </p>
+        
+        <div class="row align-items-center">
+            <!-- Contact button -->
+            <div class="col-auto h-50 m-0">
+                {{ if .Site.Params.settings.hero.buttonEnable }}
+                <a class="email-link btn mt-3"
+                   href="mailto:{{ .Site.Params.settings.hero.email }}"
+                    rel="noopener noreferrer" target="_blank">
+                    {{ .Site.Params.settings.hero.buttonName }}
+                </a>
+                {{ end }}
+            </div>
+
+            <!-- Socials buttons -->
+            <div class="col-auto px-0 h-50 m-0">
+                <span>
+                    {{ range .Site.Params.content.hero.socialLinks }}
+                    <span class="px-1">
+                        <a href="{{ .url }}" target="_blank"
+                            class="mt-3 btn social-icon">
+                            <i class="{{ .icon }}"></i>
+                        </a>
+                    </span>
+                    {{ end }}
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+{{end}}

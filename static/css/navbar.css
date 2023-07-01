@@ -1,0 +1,13 @@
+.offcanvas-backdrop.show {
+  opacity: 2;
+  background-color: rgba(15,23,42,.5);
+  backdrop-filter: blur(10px);
+}
+
+#menuButton path {
+    fill: var(--primary-color) !important;
+}
+
+.navbar .nav-link {
+    color: var(--primary-color) !important;
+}
