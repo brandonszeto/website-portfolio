@@ -96,9 +96,36 @@ skillsItems = ["OpenCV", "Verilog HDL", "PyTorch", "Python", "C++"]
 enable = true
 title = "What I've done"
 
+[[params.content.experience.items]]
+job = "Professional Chair"
+company = "ECE USC"
+companyUrl = "https://eceusc.ucsd.edu"
+date = "Jan 2022 - Present"
+text = "I am currently serving as professional chair for the Electrical and Computer Engineering Undergraduate Student Council at UCSD. I have helped plan and host professional events for undergraduate students with companies such as ASML, General Atomics, and Qualcomm."
+enableInfo = true
+info = "Planning events for the upcoming schoolyear"
+
+[[params.content.experience.items]]
+job = "Summer Intern"
+company = "AMI-USC"
+companyUrl = "https://ami.usc.edu"
+date = "Jan 2021 - Aug 2021"
+text = "Under mentorship, I worked on a project to develop a soft robotic gripper powered by miniature pneumatic actuators programmed and controlled by an Arduino circuit board. I used SolidWorks computer-aided design to create a mold for the soft silicone grip and learned basic Arduino circuit design and programming."
+enableInfo = true
+info = "Planning events for the upcoming schoolyear"
+
+[[params.content.experience.items]]
+job = "Summer Intern"
+company = "AMI-USC"
+companyUrl = "https://ami.usc.edu"
+date = "Jan 2020 - Aug 2020"
+text = "Under mentorship, I worked in a group of three on a project to understand the clinical applications of virtual and augmented reality on patients with neurological disorders such as Alzheimer's. I utilized the Unity game engine and simple scripting in C# to render three-dimensional spaces for simple cognitive tasks such as matching games and mindful meditation."
+enableInfo = true
+info = "Planning events for the upcoming schoolyear"
+
 [params.content.projects]
 enable = true
-title = "Projects"
+title = "Featured Projects"
 
 [params.content.contact]
 enable = true

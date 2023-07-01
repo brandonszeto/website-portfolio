@@ -1,3 +1,9 @@
+#about {
+    min-height: 100vh;
+    line-height: 2rem;
+    max-width: 100%;
+}
+
 #about h3 {
     display: flex;
     -webkit-box-align: center;
