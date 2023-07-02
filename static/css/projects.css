@@ -51,11 +51,6 @@
 }
 
 #projects .img-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background: var(--primary-color);
   opacity: 0.2;
   z-index: 2;
@@ -106,6 +101,7 @@
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     border: none !important;
+    position: relative;
 }
 
 #projects .card .card-footer {
