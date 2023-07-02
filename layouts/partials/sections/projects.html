@@ -1,9 +1,80 @@
 {{ if .Site.Params.content.projects.enable }}
 <section id="projects" class="py-0 py-sm-5">
-    <div class="col-9 container bg-transparent">
-        <h3 class="">
-            {{ .Site.Params.content.projects.title }}
-        </h3>
+    <div class="col-9 container">
+        <div class="container bg-transparent">
+            <h3 class="py-5">
+                {{ .Site.Params.content.projects.title }}
+            </h3>
+        </div>
+
+        <!-- <div class="card justify-content-center"> -->
+        <!--     <!-1- Card head -1-> -->
+        <!--     <div class="d-flex col-9 bg-transparent project-container align-items-stretch"> -->
+        <!--         <div class="img-container"> -->
+        <!--           <div class="img-overlay"></div> -->
+        <!--           <img class="image static" src="/images/projects/2048_frame.png"> -->
+        <!--           <img class="image active" src="/images/projects/2048.png"> -->
+        <!--         </div> -->
+
+        <!--         <div class="mx-0 col-12 col-sm-12 col-md-5 col-lg-5 -->
+        <!--             justify-content-center description-container"> -->
+        <!--             lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum -->
+        <!--         </div> -->
+        <!--     </div> -->
+        <!--     <!-1- Card body -1-> -->
+        <!--     <!-1- Card footer -1-> -->
+        <!-- </div> -->
+
+        <div class="row justify-content-center px-3 px-md-5">
+            {{ range .Site.Params.content.projects.items }}
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3 h-100" title="{{ .title }}">
+                    <!-- Card image -->
+                    <div class="card-head img-container">
+                        <!-- <img class="card-img-top" src="{{ .image }}" alt="{{ .title }}"> -->
+                        <div class="img-overlay"></div>
+                        <img class="card-img-top static"
+                             src="{{ .coverImage }}">
+                        <img class="card-img-top active" src="{{ .image }}">
+                    </div>
+
+                    <!-- Card description -->
+                    <div class="card-body bg-transparent p-3">
+                        <div class="pb-2 bg-transparent">
+                            {{ range .badges }}
+                            <span class="badge badge-secondary">{{ . }}</span>
+                            {{ end }}
+                        </div>
+                        <h5 class="card-title bg-transparent mt-1">{{ .title }}</h5>
+                        <div class="card-text bg-transparent secondary-font">
+                            {{ .content }}
+                        </div>
+                    </div>
+
+                    <!-- Card footer -->
+                    {{ if or (.links) (.featured) }}
+                    <div class="card-footer py-3">
+                        {{ range .links }}
+                        <span class="m-1 mx-2">
+                            <a href="{{ .url }}" target="_blank">
+                                <i class="{{ .icon }}"></i>
+                            </a>
+                        </span>
+                        {{ end }}
+                        {{ if .featured }}
+                        <span class="float-end">
+                            <a class="btn btn-sm" href="{{ .featuredLink }}" target="_blank">
+                                {{ .featuredName }}
+                            </a>
+                        </span>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+
+                </div>
+            </div>
+            {{ end }}
+        </div>
     </div>
 </section>
 {{ end }}

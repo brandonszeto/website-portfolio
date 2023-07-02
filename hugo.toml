@@ -127,6 +127,45 @@ info = "Planning events for the upcoming schoolyear"
 enable = true
 title = "Featured Projects"
 
+[[params.content.projects.items]]
+title = "2048 AI Agent"
+content = "An AI agent implemented using a depth-3 game tree and the expectimax algorithm. Achieves a score over 20,000 more than 50% of the time. (Code Available upon request)"
+image = "/images/projects/2048.png"
+coverImage = "/images/projects/2048_frame.png"
+badges = ["Python", "Pygame"]
+featured = true
+featuredName = "Read More"
+featuredLink = "google.com"
+[[params.content.projects.items.links]]
+icon = "fab fa-github"
+url = "https://github.com/brandonszeto/CSE-150B/pa2"
+
+[[params.content.projects.items]]
+title = "9-bit Microprocessor"
+content = "A 9-bit microprocessor written in VHDL capable of processing instructions 9-bits wide (translated from custom assembly language). Programs run include parity-bit calculation, hamming code error detection, and pattern detection. (Code Available upon request)"
+image = "/images/projects/microprocessor.png"
+coverImage = "/images/projects/microprocessor.png"
+badges = ["Python", "Verilog", "Assembly"]
+featured = true
+featuredName = "Read More"
+featuredLink = "google.com"
+[[params.content.projects.items.links]]
+icon = "fab fa-github"
+url = "https://github.com/brandonszeto/CSE-141L"
+
+[[params.content.projects.items]]
+title = "Search Algorithm Visualization"
+content = "Visualization of depth-first search, breadth-first search, uniform-cost search (Dijkstra's), and A* search (using Manhattan Distance as the heuristic). The goal is to find a path between a start and goal node."
+image = "/images/projects/algorithm.png"
+coverImage = "/images/projects/algorithm_frame.png"
+badges = ["Python", "Pygame"]
+featured = true
+featuredName = "Read More"
+featuredLink = "google.com"
+[[params.content.projects.items.links]]
+icon = "fab fa-github"
+url = "https://github.com/brandonszeto/CSE-150B/pa1"
+
 [params.content.contact]
 enable = true
 text = "I'm currently looking for opportunities in computer science, engineering, and data science. Whether you have a question or just want to say hi, I'll try my best to get back to you!"
