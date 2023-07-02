@@ -11,3 +11,8 @@
 .navbar .nav-link {
     color: var(--primary-color) !important;
 }
+
+nav {
+  background-color: transparent;
+}
+

@@ -7,24 +7,6 @@
             </h3>
         </div>
 
-        <!-- <div class="card justify-content-center"> -->
-        <!--     <!-1- Card head -1-> -->
-        <!--     <div class="d-flex col-9 bg-transparent project-container align-items-stretch"> -->
-        <!--         <div class="img-container"> -->
-        <!--           <div class="img-overlay"></div> -->
-        <!--           <img class="image static" src="/images/projects/2048_frame.png"> -->
-        <!--           <img class="image active" src="/images/projects/2048.png"> -->
-        <!--         </div> -->
-
-        <!--         <div class="mx-0 col-12 col-sm-12 col-md-5 col-lg-5 -->
-        <!--             justify-content-center description-container"> -->
-        <!--             lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum -->
-        <!--         </div> -->
-        <!--     </div> -->
-        <!--     <!-1- Card body -1-> -->
-        <!--     <!-1- Card footer -1-> -->
-        <!-- </div> -->
-
         <div class="row justify-content-center px-3 px-md-5">
             {{ range .Site.Params.content.projects.items }}
             <div class="col-lg-4 col-md-6 my-3">
@@ -75,6 +57,17 @@
             </div>
             {{ end }}
         </div>
+
+        <!-- Contact button -->
+        <!-- <div class="col-auto h-50 m-0"> -->
+        <!--     {{ if .Site.Params.settings.hero.buttonEnable }} -->
+        <!--     <a class="email-link btn mt-3" -->
+        <!--        href="mailto:{{ .Site.Params.settings.hero.email }}" -->
+        <!--         rel="noopener noreferrer" target="_blank"> -->
+        <!--         {{ .Site.Params.settings.hero.buttonName }} -->
+        <!--     </a> -->
+        <!--     {{ end }} -->
+        <!-- </div> -->
     </div>
 </section>
 {{ end }}

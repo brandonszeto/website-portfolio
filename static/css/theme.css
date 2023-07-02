@@ -17,3 +17,49 @@ h2 {
 		background-position: 0% 50%;
 	}
 }
+
+body {
+  position: relative;
+  
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: var(--background-color);
+  &::before {
+    content: "";
+    position: absolute;
+    width: 123px;
+    height: 123px;
+    left: 60%;
+    top: 138px;
+    filter: blur(90px);
+    background-color: #014ca7;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 123px;
+    height: 123px;
+    left: 80%;
+    top: 550px;
+    background-color: #18B2DE;
+    filter: blur(80px);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color); 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 100vw;
+  background: var(--primary-color); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}

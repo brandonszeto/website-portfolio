@@ -67,21 +67,13 @@ title = "Brandon Szeto."
 blurb = "I am a student at [UCSD](https://ucsd.edu) double majoring in computer engineering and statistics. I have experience in programming, hardware design, and web development."
 
 [params.color]
-textColor = "#343a40"
+# textColor = "#343a40"
+textColor = "#565f89"
 secondaryTextColor = "#6c757d"
-backgroundColor = "#eaedf0"
-secondaryBackgroundColor = "#64ffda1a"
-primaryColor = "#007bff"
-# primaryColor = "#ff5b77"
+backgroundColor = "#1a1b26"
+secondaryBackgroundColor = "#414868"
+primaryColor = "#7aa2f7"
 secondaryColor = "#f8f9fa"
-
-[params.darkmode]
-textColor = "#e4e6eb"
-secondaryTextColor = "#b0b3b8"
-backgroundColor = "#18191a"
-secondaryBackgroundColor = "#212529"
-primaryColor = "#ffffff"
-secondaryColor = "#212529"
 
 [params.content.about]
 title = "About Me"
