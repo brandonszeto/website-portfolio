@@ -16,3 +16,8 @@ nav {
   background-color: transparent;
 }
 
+.offcanvas {
+    background-color: var(--background-color) !important;
+    opacity: 0.9;
+}
+
