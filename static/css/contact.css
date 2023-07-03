@@ -21,8 +21,8 @@
     opacity: 0.9;
 }
 
-#contact h3 {
-    color: var(--primary-color);
+#contact h2 {
+    /* color: var(--primary-color); */
     font-size: clamp(40px, 5vw, 60px);
     font-weight: bold;
 }

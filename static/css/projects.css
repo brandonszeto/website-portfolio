@@ -52,7 +52,7 @@
 
 #projects .img-overlay {
   background: var(--background-color);
-  opacity: 0.5;
+  opacity: 0.3;
   z-index: 2;
 }
 
@@ -80,7 +80,7 @@
 
 #projects .badge {
     /* background-color: var(--primary-color) !important; */
-    color: var(--text-color) !important;
+    color: var(--primary-color) !important;
     border-radius: 0.5rem !important;
     border-color: var(--primary-color);
     border: solid;

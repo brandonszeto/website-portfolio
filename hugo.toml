@@ -32,7 +32,8 @@ defaultTheme = "light" # dark
 
 # Navbar Settings
 [params.navbar]
-disableName = false
+enableName = true
+enableFav = false
 
 # Remove the following buttons from the navbar
 enableAbout = false
@@ -67,8 +68,8 @@ title = "Brandon Szeto."
 blurb = "I am a student at [UCSD](https://ucsd.edu) double majoring in computer engineering and statistics. I have experience in programming, hardware design, and web development."
 
 [params.color]
-# textColor = "#343a40"
-textColor = "#565f89"
+# textColor = "#565f89"
+textColor = "#cfc9c2"
 secondaryTextColor = "#6c757d"
 backgroundColor = "#1a1b26"
 secondaryBackgroundColor = "#414868"

@@ -4,13 +4,16 @@
     <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/navbar.css" media="all">
 
     <!-- Navbar structure -->
-    <nav class="fixed-top navbar navbar-expand-sm navbar-scroll animate">
+    <nav class="navbar navbar-expand-sm navbar-scroll animate">
         <div class="container-fluid mx-xs-0 mx-sm-0 mx-md-0 mx-lg-0">
             <!-- Navbar Logo + Name -->
             <a class="navbar-brand primary-font text-wrap nav-link" href="{{ .Site.BaseURL}}">
+                {{ if (.Site.Params.navbar.enableFav) }}
                 <img src="{{ .Site.Params.settings.favicon }}" width="40"
                 height="40" class="d-inline-block align-top">
-                {{ if (.Site.Params.navbar.enableName | default true) }}
+                {{ end }}
+
+                {{ if (.Site.Params.navbar.enableName) }}
                 {{ .Title }}
                 {{ end }}
             </a>
