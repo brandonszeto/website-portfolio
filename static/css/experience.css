@@ -2,6 +2,7 @@
     min-height: 80vh;
     line-height: 2rem;
     max-width: 100%;
+    position: relative;
 }
 
 #experience h3 {
@@ -165,3 +166,15 @@
     color: var(--primary-color);
 }
 
+/* #experience { */
+/*     &::before { */
+/*       content: ""; */
+/*       position: absolute; */
+/*       width: 80%; */
+/*       height: 100px; */
+/*       top: 40%; */
+/*       filter: blur(80px); */
+/*       background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%); */
+/*       z-index: -1; */
+/*     } */
+/* } */

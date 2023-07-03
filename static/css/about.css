@@ -2,6 +2,7 @@
     min-height: 100vh;
     line-height: 2rem;
     max-width: 100%;
+    position: relative;
 }
 
 #about h3 {
@@ -71,4 +72,14 @@
     list-style: none;
 }
 
-
+#about::before {
+      content: "";
+      position: absolute;
+      width: 80%;
+      height: 100px;
+      top: 30%;
+      filter: blur(120px);
+      background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%);
+      z-index: -1;
+      padding-left: 10rem;
+}

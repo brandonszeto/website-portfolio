@@ -1,5 +1,6 @@
 #contact {
     height: 100vh;
+    position: relative;
 }
 
 #contact a.btn {
@@ -30,4 +31,17 @@
 #contact .text {
     color: var(--text-color) !important;
     font-size: clamp(12px, 5vw, 16px);
+}
+
+#contact {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 80%;
+      height: 100px;
+      top: 40%;
+      filter: blur(80px);
+      background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%);
+      z-index: -1;
+    }
 }
