@@ -41,9 +41,19 @@ enableExperience = false
 enableResearch = false
 enableAchievements = false
 enableProjects = false
-enableBlog = true
-enableGallery = true 
 enableContact = true 
+
+[[params.navbar.menus]]
+identifier = "Blog"
+name = "Blog Name"
+title = "Blog"
+url = "/blogs"
+
+[[params.navbar.menus]]
+identifier = "Gallery"
+name = "Gallery Name"
+title = "Gallery"
+url = "/gallery"
 
 # Settings for hero section
 [params.settings.hero]

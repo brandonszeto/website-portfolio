@@ -14,7 +14,7 @@
                 {{ end }}
 
                 {{ if (.Site.Params.navbar.enableName) }}
-                {{ .Title }}
+                {{ .Site.Params.settings.title }}
                 {{ end }}
             </a>
 
@@ -29,6 +29,16 @@
                 id="offcanvasNavbar" style="width: 60%;">
                 <div class="offcanvas-body">
                     <ol class="navbar-nav ms-auto flex=grow-1 pe-3">
+
+                        <!-- All other pages -->
+                        {{ range .Site.Params.navbar.menus }}
+                        <li class="nav-item navbar-text">
+                            <a class="nav-link" href="{{.url}}">
+                                {{ .name }}
+                            </a>
+                        </li>
+                        {{ end }}
+
                         <!-- About -->
                         {{ if (.Site.Params.navbar.enableAbout | default true) }}
                         <li class="nav-item navbar-text">
@@ -75,26 +85,6 @@
                             <a class="nav-link" href="{{ .Site.BaseURL }}#projects"
                                 aria-label="projects">
                                 {{ .Site.Params.projects.title | default "Projects" }}
-                            </a>
-                        </li>
-                        {{ end }}
-
-                        <!-- Blog -->
-                        {{ if (.Site.Params.navbar.enableBlog | default true) }}
-                        <li class="nav-item navbar-text">
-                            <a class="nav-link" href="{{ .Site.BaseURL }}#blog"
-                                aria-label="blog">
-                                {{ .Site.Params.blog.title | default "Blog" }}
-                            </a>
-                        </li>
-                        {{ end }}
-
-                        <!-- Gallery -->
-                        {{ if (.Site.Params.navbar.enableGallery | default true) }}
-                        <li class="nav-item navbar-text">
-                            <a class="nav-link" href="{{ .Site.BaseURL }}#gallery"
-                                aria-label="gallery">
-                                {{ .Site.Params.gallery.title | default "Gallery" }}
                             </a>
                         </li>
                         {{ end }}
