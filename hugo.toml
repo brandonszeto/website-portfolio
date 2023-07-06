@@ -45,15 +45,15 @@ enableContact = true
 
 [[params.navbar.menus]]
 identifier = "Blog"
-name = "Blog Name"
+name = "Blog"
 title = "Blog"
 url = "/blogs"
 
-[[params.navbar.menus]]
-identifier = "Gallery"
-name = "Gallery Name"
-title = "Gallery"
-url = "/gallery"
+# [[params.navbar.menus]]
+# identifier = "Gallery"
+# name = "Gallery"
+# title = "Gallery"
+# url = "/gallery"
 
 # Settings for hero section
 [params.settings.hero]
@@ -128,7 +128,7 @@ info = "Planning events for the upcoming schoolyear"
 
 [params.content.projects]
 enable = true
-title = "Featured Projects"
+title = "Recent Projects"
 
 [[params.content.projects.items]]
 title = "2048 AI Agent"
