@@ -1,9 +1,0 @@
-[submodule "themes/starter-hugo-academic"]
-	path = themes/starter-hugo-academic
-	url = https://github.com/wowchemy/starter-hugo-academic.git
-[submodule "themes/gohugo-theme-ananke"]
-	path = themes/gohugo-theme-ananke
-	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
-[submodule "themes/hugo-profile"]
-	path = themes/hugo-profile
-	url = https://github.com/gurusabarish/hugo-profile.git

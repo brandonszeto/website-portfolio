@@ -1,6 +1,7 @@
 baseURL = 'http://brandonszeto.com/'
 languageCode = 'en-us'
 title = 'Brandon Szeto'
+# theme = 'hugo-theme-swe'
 
 [menus]
 
@@ -80,11 +81,15 @@ blurb = "I am a student at [UCSD](https://ucsd.edu) double majoring in computer 
 [params.color]
 # textColor = "#565f89"
 textColor = "#cfc9c2"
+# textColor = "#fbf1c7"
 secondaryTextColor = "#6c757d"
 backgroundColor = "#1a1b26"
+# backgroundColor = "#1d2021"
 secondaryBackgroundColor = "#414868"
+# primaryColor = "#689d6a"
 primaryColor = "#7aa2f7"
-secondaryColor = "#f8f9fa"
+# secondaryColor = "#83a598"
+secondaryColor = "#9b51e0"
 
 [params.content.about]
 title = "About Me"
@@ -96,7 +101,7 @@ skillsTitle = "Here are a few technologies I've been working with recently:"
 skillsItems = ["OpenCV", "Verilog HDL", "PyTorch", "Python", "C++"]
 
 [params.content.experience]
-enable = true
+enable = false
 title = "What I've done"
 
 [[params.content.experience.items]]
@@ -128,7 +133,7 @@ info = "Planning events for the upcoming schoolyear"
 
 [params.content.projects]
 enable = true
-title = "Recent Projects"
+title = "Projects"
 
 [[params.content.projects.items]]
 title = "2048 AI Agent"

@@ -19,8 +19,8 @@
 
 #about h3::before {
     position: relative;
-    counter-increment: section 1;
-    content: "0" counter(section) ".";
+    /* counter-increment: section 1; */
+    /* content: "0" counter(section) "."; */
     font-size: clamp(20px, 6vw, 30px);
     color: var(--primary-color);
     margin-right: 10px;
@@ -79,7 +79,7 @@
       height: 100px;
       top: 30%;
       filter: blur(120px);
-      background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%);
+      background: linear-gradient(93.51deg, var(--primary-color) 2.84%, var(--secondary-color) 99.18%);
       z-index: -1;
       padding-left: 10rem;
 }

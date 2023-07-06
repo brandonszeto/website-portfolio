@@ -32,7 +32,7 @@ body {
     left: 60%;
     top: 138px;
     filter: blur(90px);
-    background-color: #014ca7;
+    background-color: var(--secondary-color);
   }
   &::after {
     content: "";
@@ -41,7 +41,7 @@ body {
     height: 123px;
     left: 80%;
     top: 550px;
-    background-color: #18B2DE;
+    background-color: var(--primary-color);
     filter: blur(80px);
   }
 }

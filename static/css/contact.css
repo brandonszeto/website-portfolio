@@ -41,7 +41,7 @@
       height: 100px;
       top: 40%;
       filter: blur(80px);
-      background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%);
+      background: linear-gradient(93.51deg, var(--primary-color) 2.84%, var(--secondary-color) 99.18%);
       z-index: -1;
     }
 }
