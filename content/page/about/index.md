@@ -1,6 +1,6 @@
 ---
 title: About
-description: Get to know me a little better! 
+description: A little about me. 
 date: '2023-07-06'
 aliases:
   - about
