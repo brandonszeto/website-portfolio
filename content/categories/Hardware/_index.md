@@ -1,7 +1,7 @@
 ---
-title: "Hardware"
+title: "hardware"
 description: "Posts related to hardware"
-slug: "Hardware"
+slug: "hardware"
 image: "hardware.jpg"
 style:
     background: "#2a9d8f"
