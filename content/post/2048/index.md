@@ -112,8 +112,6 @@ that is computationally expensive.
 Here we can see some examples of the expectimax agent in action:
 
 ![4x4 Board](4x4.gif)
-![5x5 Board](5x5.gif)
-![6x6 Board](6x6.gif)
 ![7x7 Board](7x7.gif)
 
 Notice how on smaller boards the expectimax agent runs noticeably faster,
