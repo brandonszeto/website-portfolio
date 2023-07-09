@@ -112,8 +112,11 @@ that is computationally expensive.
 Here we can see some examples of the expectimax agent in action:
 
 ![4x4 Board](4x4.gif)
+![5x5 Board](5x5.gif)
+![6x6 Board](6x6.gif)
+![7x7 Board](7x7.gif)
 
-On smaller boards the expectimax agent runs noticeably faster,
+Notice how on smaller boards the expectimax agent runs noticeably faster,
 gathering points more easily. As previously mentioned, this is due to the number
 of probable outcomes and actions calculated by the tree. Consider the 4x4 game
 board. In each iteration of the tree, we see 4 possible moves followed by 
