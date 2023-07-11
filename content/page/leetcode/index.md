@@ -21,7 +21,9 @@ pressure.
 The following closely follows the structure articulated by [NeetCode](https://neetcode.io).
 I also took notes on how I felt about each problem/performance.
 
-⭐️7/500 problems completed ⭐️
+⭐️12/200 Easy ⭐️ |
+⭐️1/100 Medium ⭐️ |
+⭐️0/50 Hard ⭐️
 
 ## Easy
 
@@ -88,6 +90,59 @@ I also took notes on how I felt about each problem/performance.
 
 {{< youtube aTdwrq2ewtQ >}}
 
+### 110. Balanced Binary Tree [Python]
+📆 July 11, 2023
+
+🖇️ Topic: Binary Tree
+
+📝 Notes: Felt good
+
+{{< youtube hXB_-3Qt9JU >}}
+
+### 543. Diameter of Binary Tree [Python]
+📆 July 11, 2023
+
+🖇️ Topic: Binary Tree
+
+📝 Notes: Misinterpreted problem
+
+{{< youtube 9bKM1lsKkgM >}}
+
+### 100. Same Binary Tree [Python]
+📆 July 11, 2023
+
+🖇️ Topic: Binary Tree
+
+📝 Notes: Missed easy solution at first
+
+{{< youtube a1eoceSYXMY >}}
+
+### 104. Maximum Depth of Binary Tree [Python]
+📆 July 11, 2023
+
+🖇️ Topic: Binary Tree
+
+📝 Notes: Used self attribute
+
+{{< youtube TemFMQRC-TI >}}
+
+### 226. Invert Binary Tree [Python]
+📆 July 11, 2023
+
+🖇️ Topic: Binary Tree
+
+📝 Notes: Mistyped variable
+
+{{< youtube ajeVB36CZUg >}}
 ## Medium
+
+### 226. Add Two Numbers [Python]
+📆 July 11, 2023
+
+🖇️ Topic: Linked list
+
+📝 Notes: Minor mistakes in implementation
+
+{{< youtube Mcu1FEkQJ58 >}}
 
 ## Hard
