@@ -9,7 +9,7 @@ languages:
     en:
         languageName: English
         title: Brandon Szeto
-        description: Example description
+        description: Brandon Szeto's personal website
         weight: 1
 
 # Change it to your Disqus shortname before using
@@ -47,7 +47,7 @@ params:
 
     sidebar:
         emoji: ⚙️
-        subtitle: Welcome to my personal website where you can find blog posts and projects that I've been working on. 
+        subtitle: Welcome! Here you can find my blog where I document my projects and interests in addition to my leetcode log and photo gallery!
         avatar:
             enabled: true
             local: true
