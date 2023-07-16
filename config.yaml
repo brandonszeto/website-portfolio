@@ -46,8 +46,8 @@ params:
         lastUpdated: Jan 02, 2006 15:04 MST
 
     sidebar:
-        emoji: ⚙️
-        subtitle: Welcome! Here you can find my blog where I document my projects and interests in addition to my leetcode log and photo gallery!
+        emoji:
+        subtitle: Welcome! Here you can find my blog where I document my projects, interests, and learning journey.
         avatar:
             enabled: true
             local: true
