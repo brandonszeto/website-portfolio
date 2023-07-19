@@ -26,6 +26,18 @@ I also took notes on how I felt about each problem/performance.
 ⭐️14/200 Easy ⭐️
 
 ## Hard
+### 42. Trapping Rain Water [Python]
+📆 July 17, 2023
+
+🖇️ Topic: Two Pointers
+
+📝 Notes: Took advantage of previous problem pattern (container with most
+water). This time using two pointer pattern nested inside a for loop. Need to
+remember to avoid duplicates when populating the list.
+
+🧩 Pattern: Use two pointers to avoid O(n^3)/higher time complexity
+
+{{< youtube aPLQ51eZVB4 >}}
 
 ## Medium
 ### 128. Longest Consecutive Sequence [Python]
@@ -128,6 +140,18 @@ list of numbers and their respective frequencies
 🧩 Pattern: Edit linked list pointers in-place
 
 {{< youtube Mcu1FEkQJ58 >}}
+
+### 11. Container With Most Water [Python]
+📆 July 17, 2023
+
+🖇️ Topic: Two Pointers
+
+📝 Notes: Didn't have to care about other complicated cases like if one pointer
+should take priority over the other in ties.
+
+🧩 Pattern: Use two pointers to avoid O(n^2) time complexity
+
+{{< youtube aPLQ51eZVB4 >}}
 
 ## Easy
 ### 110. Balanced Binary Tree [Python]
