@@ -1,7 +1,7 @@
 ---
 author : "Brandon Szeto"
 title : "My Neovim Configuration 2023"
-date : "2023-07-17"
+date : "2023-07-18"
 description: "Notes + :help for my own Neovim configuration. This blog post will
 be updated until the end of 2023. I am mostly tweaking my configuration during
 the summer as I have more time on my hands."
@@ -11,7 +11,7 @@ tags : [
 ]
 categories : [
 ]
-image : ""
+image : "nvim.png"
 math: true
 draft: false
 ---
@@ -38,6 +38,8 @@ configuration can be found [here](https://github.com/brandonszeto/nvim-config).
 | -------- | -------- | ----- |
 | `%` | Jump to corresponding pair `()`, `[]`, or `{}` |  |
 | `ge` | Jump backwards to end of word |  |
+| `f)` | Jump to first occurrence of ')' |  |
+| `t)` | Jump to character before first occurrence of ')' |  |
 | `<leader>bp` | Go to previous buffer | Custom mapping, not default |
 | `<leader>bn` | Go to next buffer | Custom mapping, not default |
 
@@ -143,7 +145,7 @@ of lazy's features can be found [here](https://github.com/folke/lazy.nvim). I
 plan to look into this later when I begin profiling the startuptime of my
 configuration.
 
-### [surround.vim](https://github.com/tpope/vim-surround)
+### [Tpope's](https://github.com/tpope) [surround.vim](https://github.com/tpope/vim-surround) and [commentary.vim](https://github.com/tpope/vim-commentary)
 
 Here are some quick shortcuts involving parantheses using vim-surround:
 | Shortcut | Function | Notes |
@@ -157,17 +159,34 @@ Here are some quick shortcuts involving parantheses using vim-surround:
 | `cs]<q>` | Change brackets around selected word to html tag| `[word]` -> `<q>word</q>`|
 | `cst[` | Change html tag around selected word to brackets | `<q>word</q>` -> `[word]` |
 
-## TODOs:
-### [copilot.vim](https://github.com/github/copilot.vim)
-### [UltiSnips](https://github.com/SirVer/ultisnips)
-### [commentary.vim](https://github.com/tpope/vim-commentary)
-### [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
-### [VimTeX](https://github.com/lervag/vimtex)
-### [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-### [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
-### [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
-### [formatter.nvim](https://github.com/mhartington/formatter.nvim)
-### [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
-### [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) and [fugitive.vim](https://github.com/tpope/vim-fugitive)
-### [nvim-orgmode](https://github.com/nvim-orgmode/orgmode)
-### [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+Here are some quick shortcuts involving parantheses using vim-commentary:
+| Shortcut | Function | Notes |
+| -------- | -------- | ----- |
+| `gcc` | Comment out a line |  |
+| `gcap` | Comment out a paragraph | Or the target of any motion |
+| `gc` | Comment out a selection | Visual mode |
+
+
+### Some extras:
+Here are some plugins that I use, but currently don't have much to talk about:
+
+Productivity + Homework ([Read more here](https://brandonszeto.com/p/my-productivity-workflow-2023/)):
+- [copilot.vim](https://github.com/github/copilot.vim)
+- [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
+- [nvim-orgmode](https://github.com/nvim-orgmode/orgmode)
+- [UltiSnips](https://github.com/SirVer/ultisnips)
+- [VimTeX](https://github.com/lervag/vimtex)
+
+Aesthetics:
+- [formatter.nvim](https://github.com/mhartington/formatter.nvim)
+- [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
+- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
+
+Miscellaneous:
+- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
+
+Git Integration:
+- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+- [fugitive.vim](https://github.com/tpope/vim-fugitive)
