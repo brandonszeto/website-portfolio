@@ -1,7 +1,7 @@
 ---
 author : "Brandon Szeto"
 title : "2048 Expectimax Agent"
-date : "2023-04-17"
+date : "2023-04-30"
 description : "An AI agent implemented using a depth-3 game tree and the expectimax algorithm. Achieves a score over 20,000 more than 50% of the time."
 tags : [
     "python",
