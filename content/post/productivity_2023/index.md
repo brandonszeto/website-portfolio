@@ -1,7 +1,7 @@
 ---
 author : "Brandon Szeto"
 title : "My Productivity Workflow 2023"
-date : "2023-07-16"
+date : "2023-07-17"
 description: "The tools I use as a student studying computer science to pass my classes; a combination of the GitHub, Neovim, and Apple ecosystems."
 tags : [
     "lua",
