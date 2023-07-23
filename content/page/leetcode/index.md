@@ -21,8 +21,8 @@ pressure.
 The following closely follows the structure articulated by [NeetCode](https://neetcode.io).
 I also took notes on how I felt about each problem/performance.
 
-⭐️0/50 Hard ⭐️ |
-⭐️8/100 Medium ⭐️|
+⭐️1/50 Hard ⭐️ |
+⭐️9/100 Medium ⭐️|
 ⭐️14/200 Easy ⭐️
 
 ## Hard
@@ -37,9 +37,34 @@ remember to avoid duplicates when populating the list.
 
 🧩 Pattern: Use two pointers to avoid O(n^3)/higher time complexity
 
-{{< youtube aPLQ51eZVB4 >}}
+{{< youtube jd19mJ5LGPc >}}
 
 ## Medium
+
+### 150. Evaluate Reverse Polish Notation [Python]
+📆 July 21, 2023
+
+🖇️ Topic: Stack
+
+📝 Notes: While iterating through the array, push and pop items to stack to
+accumulate the correct value
+
+🧩 Pattern: Stack
+
+{{< youtube Rf5d-iCvz_c>}}
+
+### 155. Min Stack [Python]
+📆 July 21, 2023
+
+🖇️ Topic: Stack
+
+📝 Notes: Use another stack to keep track of the most up-to-date min value to
+avoid an O(n) runtime for min function call
+
+🧩 Pattern: Stack
+
+{{< youtube 7MwsygIhrUA>}}
+
 ### 128. Longest Consecutive Sequence [Python]
 📆 July 17, 2023
 
