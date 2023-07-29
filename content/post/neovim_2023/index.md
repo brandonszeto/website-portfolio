@@ -10,6 +10,7 @@ tags : [
     "vim",
 ]
 categories : [
+    "misc",
 ]
 image : "nvim.png"
 math: true

@@ -9,6 +9,7 @@ tags : [
     "latex",
 ]
 categories : [
+    "misc",
 ]
 image : "icons.png"
 math: true
