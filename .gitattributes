@@ -1,8 +1,4 @@
-content/page/gallery/cabin.jpg filter=lfs diff=lfs merge=lfs -text
-content/page/gallery/group.jpg filter=lfs diff=lfs merge=lfs -text
-content/page/gallery/lake.jpg filter=lfs diff=lfs merge=lfs -text
-content/page/gallery/pose.jpg filter=lfs diff=lfs merge=lfs -text
-content/page/gallery/swim.jpg filter=lfs diff=lfs merge=lfs -text
-content/page/gallery/data.jpg filter=lfs diff=lfs merge=lfs -text
-content/page/gallery/pink.jpg filter=lfs diff=lfs merge=lfs -text
-content/page/gallery/snow.jpg filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.gif filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
