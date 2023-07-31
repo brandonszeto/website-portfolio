@@ -20,7 +20,7 @@ I am a second-year undergraduate student at [UCSD](ucsd.edu) double-majoring in
 computer engineering [(EC26)](https://ece.ucsd.edu/undergraduate/undergraduate-programs/computer-engineering-major)
 and statistics [(MA35)](https://math.ucsd.edu/students/undergraduate/ma35-probability-statistics-b-s).
 
-- 👨‍💻 Currently serving as [ECE USC](https://eceusc.ucsd.edu)'s professional chair
+- 👨‍💻 Currently serving as [ECE USC](https://eceusc.ucsd.edu)'s professional chair.
  
 
 ### About this site
