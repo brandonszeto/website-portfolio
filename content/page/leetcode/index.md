@@ -21,11 +21,23 @@ pressure.
 The following closely follows the structure articulated by [NeetCode](https://neetcode.io).
 I also took notes on how I felt about each problem/performance.
 
-⭐️1/50 Hard ⭐️ |
-⭐️9/100 Medium ⭐️|
+⭐️2/50 Hard ⭐️ |
+⭐️14/100 Medium ⭐️|
 ⭐️14/200 Easy ⭐️
 
 ## Hard
+### 84. Largest Rectangle in Histogram [Python]
+📆 July 31, 2023
+
+🖇️ Topic: Stack
+
+📝 Notes: Many moving parts to keep track of: maxArea, stack, left and right
+indices, heights, and indices and heights in the stack.
+
+🧩 Pattern: Selectively push and pop values from a stack to get desired results
+
+{{< youtube BBznHUD99u0 >}}
+
 ### 42. Trapping Rain Water [Python]
 📆 July 17, 2023
 
@@ -40,6 +52,43 @@ remember to avoid duplicates when populating the list.
 {{< youtube jd19mJ5LGPc >}}
 
 ## Medium
+
+### 22. Generate Parentheses [Python]
+📆 July 31, 2023
+
+🖇️ Topic: Recursion
+
+📝 Notes: Backtrack from base case, changing values passed in at each call.
+Append to an array outside of the recursive calls
+
+🧩 Pattern: Backtracking
+
+{{< youtube Km2quRK-V50>}}
+
+### 739. Daily Temperature [Python]
+📆 July 31, 2023
+
+🖇️ Topic: Stack
+
+📝 Notes: Selectively pop and push to stack in order to update resulting array
+with desired value.
+
+🧩 Pattern: Stack
+
+{{< youtube XaZbpNTPAYE>}}
+
+### 853. Car Fleet [Python]
+📆 July 31, 2023
+
+🖇️ Topic: Stack
+
+📝 Notes: Use python's zip, sort, and reverse to iterate linearly. (runtime
+incorrect, should be O(nlogn) due to sort). Pop and push to stack selectively in
+order to get our stack in a format for our solution. Had to consult solution.
+
+🧩 Pattern: Stack
+
+{{< youtube Ic0ksrcr4rE>}}
 
 ### 150. Evaluate Reverse Polish Notation [Python]
 📆 July 21, 2023
