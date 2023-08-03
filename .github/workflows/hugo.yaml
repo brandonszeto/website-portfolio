@@ -104,4 +104,5 @@ jobs:
         with:
           # Set the build directory to the "public" directory generated during the build job
           # This ensures the Hugo site files are deployed.
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
