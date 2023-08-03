@@ -94,5 +94,14 @@ jobs:
     needs: build
     steps:
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/checkout@v3
+        with:
+          ref: main # Ensure you are using the latest code from the "main" branch
+          repository: ${{ github.repository }} # Specify the repository to ensure you're checking out the same one
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          # Set the build directory to the "public" directory generated during the build job
+          # This ensures the Hugo site files are deployed.
+          publish_dir: ./public
