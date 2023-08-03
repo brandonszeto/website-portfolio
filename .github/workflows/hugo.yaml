@@ -29,9 +29,6 @@ defaults:
     shell: bash
 
 jobs:
-  # Delete Old Artifacts job
-  delete-artifacts:
-    runs-on: ubuntu-latest
 
   # Build job
   build:
