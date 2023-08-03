@@ -28,9 +28,33 @@ defaults:
     shell: bash
 
 jobs:
+  # Delete Old Artifacts job
+  delete-artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete Old Artifacts
+        uses: actions/github-script@v6
+        id: artifact
+        with:
+          script: |
+            const res = await github.rest.actions.listArtifactsForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            })
+
+            res.data.artifacts
+              .forEach(({ id }) => {
+                github.rest.actions.deleteArtifact({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  artifact_id: id,
+                })
+              })
+
   # Build job
   build:
     runs-on: ubuntu-latest
+    needs: delete-artifacts
     env:
       HUGO_VERSION: 0.115.4
     steps:
