@@ -36,24 +36,24 @@ jobs:
     env:
       HUGO_VERSION: 0.115.4
     steps:
-      - name: Delete Old Artifacts
-        uses: actions/github-script@v6
-        id: artifact
-        with:
-          script: |
-            const res = await github.rest.actions.listArtifactsForRepo({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-            })
+      # - name: Delete Old Artifacts
+      #   uses: actions/github-script@v6
+      #   id: artifact
+      #   with:
+      #     script: |
+      #       const res = await github.rest.actions.listArtifactsForRepo({
+      #         owner: context.repo.owner,
+      #         repo: context.repo.repo,
+      #       })
 
-            res.data.artifacts
-              .forEach(({ id }) => {
-                github.rest.actions.deleteArtifact({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  artifact_id: id,
-                })
-              })
+      #       res.data.artifacts
+      #         .forEach(({ id }) => {
+      #           github.rest.actions.deleteArtifact({
+      #             owner: context.repo.owner,
+      #             repo: context.repo.repo,
+      #             artifact_id: id,
+      #           })
+      #         })
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
@@ -80,10 +80,10 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"          
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: ./public
+      # - name: Upload artifact
+      #   uses: actions/upload-pages-artifact@v1
+      #   with:
+      #     path: ./public
 
   # Deployment job
   deploy:
