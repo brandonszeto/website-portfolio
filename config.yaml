@@ -58,20 +58,6 @@ params:
         enabled: true
         provider: giscus
 
-        giscus:
-          repo: "brandonszeto/website-portfolio"
-          repoID: "R_kgDOIurVBQ"
-          category: "General"
-          categoryID: "DIC_kwDOIurVBc4CYbRI"
-          mapping: "pathname"
-          strict: 0
-          lightTheme:
-          darkTheme: "dark"
-          reactionsEnabled: 1
-          emitMetadata: 0
-          inputPosition: "bottom"
-          lang: "en"
-
         disqusjs:
             shortname:
             apiUrl:
@@ -132,6 +118,17 @@ params:
             mapping:
             lightTheme:
             darkTheme:
+            reactionsEnabled: 1
+            emitMetadata: 0
+
+        giscus:
+            repo: brandonszeto/website-portfolio
+            repoID: R_kgDOIurVBQ
+            category: Announcements
+            categoryID: DIC_kwDOIurVBc4CYbRH
+            mapping: pathname
+            inputPosition: bottom
+            lightTheme: dark_protanopia
             reactionsEnabled: 1
             emitMetadata: 0
 
