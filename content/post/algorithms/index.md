@@ -206,7 +206,7 @@ limited to network routing, web crawling, GPS systems, and transportation
 logitics. There exist many more complex search algorithms and techniques
 in the fields of statistics and machine learning that I hope to learn more about
 in the future (perhaps simulations or the 3D visualization of techniques like
-graident descent where decision-making happens in multiple dimensions).
+gradient descent where decision-making happens in multiple dimensions).
 
 As for now, thanks for reading.  
 The core content of this article is based on a programming 
