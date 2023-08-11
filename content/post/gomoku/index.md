@@ -12,7 +12,7 @@ tags : [
 categories : [
     "ai",
 ]
-image : ""
+image : "go_hero.png"
 math: true
 toc: true
 draft: false
