@@ -2,7 +2,7 @@
 title: "miscellaneous"
 description: "Miscellaneous posts"
 slug: "misc"
-image: "misc.jpg"
+image: "gear.png"
 style:
     background: "#2a9d8f"
     color: "#fff"
