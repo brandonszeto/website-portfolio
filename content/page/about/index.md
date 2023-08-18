@@ -1,12 +1,12 @@
 ---
-title: About
+title: About Me
 description: A little about me. 
 date: '2023-07-06'
 aliases:
   - about
   - about-me
   - contact
-lastmod: '2023-07-06'
+lastmod: '2023-08-12'
 menu:
     main: 
         weight: -90
@@ -14,8 +14,6 @@ menu:
             icon: user
 toc: false
 ---
-
-## About Me 👋
 
 ### Education
 I am a third-year undergraduate student at [UCSD](ucsd.edu) majoring in
@@ -25,24 +23,16 @@ I am currently pursuing the
 [ECE BS/MS Graduate Program](https://ece.ucsd.edu/faculty-research/ece-research-areas/machine-learning-data-science-impacted),
 specializing in Machine Learning and Data Science.
 
-I expect to complete this continguous BS/MS program in 3 years (undergraduate) +
-1 year (graduate) = 4 total years.
-
-### Interests
-Currently:
-- 📖 Reading [An Introduction to Statistical Learning (Python)](https://www.statlearning.com)
-- 🕹️ Playing with Unity game development (with the intention of running
-  simulations)
-
-Want to:
-- Familiarize myself with machine learning frameworks like PyTorch, TensorFlow, and Keras
-- Test the computational limits of running inference models on my 
-  Raspberry Pi
-- Familiarize myself with GPU programming to better understand how ML
-  applications are hardware-accelerated
-
-### Activities
-- 👨‍💻 Currently serving as [ECE USC](https://eceusc.ucsd.edu)'s professional chair.
+### New skills/tools I'm playing with
+- Learning machine learning using a top-down approach (i.e. start with a framework
+  like PyTorch and work my way down to understanding basic tensor operations and
+  functions like autograd).
+- Unity Game Development (playing with ML Agents in simulation)
+- GPU architecture and programming to better understand how applications from 
+  games to neural networks can be accelerated.
+- Embedded programming with a Raspberry Pi 3 + camera module (applications
+  include real-time object detection, a DNS server to block ads, and pushing its
+  limited compute by running inference)
  
 ### About this site
 This site is built using Hugo, an open source static site generator available 
