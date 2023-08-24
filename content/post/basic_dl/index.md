@@ -15,7 +15,7 @@ categories : [
 image : ""
 math: true
 toc: true
-draft: false
+draft: true
 ---
 
 ## Introduction
