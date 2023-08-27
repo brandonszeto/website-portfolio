@@ -61,14 +61,43 @@ The official GitHub docs:
 - [Creating a GitHub Pages Site (Quickstart)](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
 - [Official GitHub Pages Docs](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)
 
+A static site hosted on GitHub pages should look something like the following:
 ![The GitHub Pages for this website](gh_pages.png)
 
-[Link to my website repo](https://github.com/brandonszeto/website-portfolio)
+If you want to check out my website repository check [here](https://github.com/brandonszeto/website-portfolio).
 
 ## Custom Domain
+As you may have noticed, my domain does not end in .github.io. Instead, I am
+serving my blog from a custom domain. The process is simple and affordable if
+you want to go the extra step to obtain a custom domain. In my case,
+brandonszeto.com cost me $12/year from Google Domains. However, prices may vary
+dramatically depending on the domain name you want. For example, the most
+expensive domain name ever sold was cars.com for $872 million according to
+GoDaddy.
 
-### Setting up a Custom Domain on GitHub
+The process is extremely simple. First, you want to go to your repository
+settings and fine the pages settings. Here, you can simply type your custom
+domain.
 
-## Hugo Template
+![Type your custom domain here](pages_domain.png)
+
+Here, you will also have the choice to enforce HTTPS encryption. Next, you go to
+Google Domains (or your DNS provider of choice) and create a `CNAME` record that
+points your subdomain to the default domain of your site. In my case this is
+`brandonszeto.github.io`. Next, an `A` record can be created by pointing the
+apex domain to the IP addresses for GitHub Pages. Below, you can see what this
+looks like in Google Domains:
+
+![Changing DNS records in Google Domains](google_domains.png)
+
+*Note: There are four IP addresses in the A record to help with load balancing.*
+
+## Hugo
+
+## Extras
+
+### Giscus
+
+### Workflows
 
 ## Conclusion
