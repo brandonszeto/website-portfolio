@@ -50,7 +50,6 @@ with exta data (like a pixel in three-dimensional space). By convention, let's
 label the vertices and edges of the voxel as follows:
 
 
-
 ## Conclusion:
 ### Resources
 - https://people.eecs.berkeley.edu/~jrs/meshpapers/LorensenCline.pdf
