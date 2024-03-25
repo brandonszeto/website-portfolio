@@ -1,6 +1,6 @@
 ---
 title: About Me
-description: A little about me. 
+description: 
 date: '2023-07-06'
 aliases:
   - about
@@ -22,17 +22,6 @@ computer engineering
 I am currently pursuing the 
 [ECE BS/MS Graduate Program](https://ece.ucsd.edu/faculty-research/ece-research-areas/machine-learning-data-science-impacted),
 specializing in Machine Learning and Data Science.
-
-### New skills/tools I'm playing with
-- Learning machine learning using a top-down approach (i.e. start with a framework
-  like PyTorch and work my way down to understanding basic tensor operations and
-  functions like autograd).
-- Unity Game Development (playing with ML Agents in simulation)
-- GPU architecture and programming to better understand how applications from 
-  games to neural networks can be accelerated.
-- Embedded programming with a Raspberry Pi 3 + camera module (applications
-  include real-time object detection, a DNS server to block ads, and pushing its
-  limited compute by running inference)
  
 ### About this site
 This site is built using Hugo, an open source static site generator available 

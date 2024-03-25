@@ -196,12 +196,16 @@ menu:
           url: https://github.com/brandonszeto/
           params:
               icon: brand-github
-
         - identifier: linked-in
           name: LinkedIn
           url: https://www.linkedin.com/in/brandon-szeto/          
           params:
               icon: brand-linkedin
+        - identifier: leetcode
+          name: LeetCode
+          url: https://leetcode.com/bszeto/          
+          params:
+              icon: brand-leetcode
 
 related:
     includeNewer: true
