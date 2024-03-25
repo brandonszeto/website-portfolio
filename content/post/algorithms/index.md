@@ -182,22 +182,22 @@ function A_Star(start, goal, h)
     return failure
 ```
 
-## Final Implementation
+<!-- ## Final Implementation -->
 
-Let's observe these algorithms in action in a grid consisting of:
-- A yellow starting square
-- An orange ending square
-- Black "concrete" that can be easily traversed through
-- Blue "puddles" that cannot be traversed through
-- Green "grass" that can be traversed through at higher weight cost
+<!-- Let's observe these algorithms in action in a grid consisting of: -->
+<!-- - A yellow starting square -->
+<!-- - An orange ending square -->
+<!-- - Black "concrete" that can be easily traversed through -->
+<!-- - Blue "puddles" that cannot be traversed through -->
+<!-- - Green "grass" that can be traversed through at higher weight cost -->
 
-Where the goal is to traverse from the yellow square to the orange square.
+<!-- Where the goal is to traverse from the yellow square to the orange square. -->
 
-![Algorithms in action](algorithm.gif)
+<!-- ![Algorithms in action](algorithm.gif) -->
 
-Some things to notice:
-- DFS traverses one long path before finding the goal
-- BFS, UCS, and A\* each slowly search outwards depending on the weights
+<!-- Some things to notice: -->
+<!-- - DFS traverses one long path before finding the goal -->
+<!-- - BFS, UCS, and A\* each slowly search outwards depending on the weights -->
 
 I've only scratched the surface of what these algorithms are capable of. For
 example, some 

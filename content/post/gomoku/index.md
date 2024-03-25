@@ -281,7 +281,7 @@ created agent versus a random agent. Using a computational budget of 1000
 (iterations of our MCTS loop), we have a crude agent capable of beating a random
 agent. 
 
-![UCB Agent vs. Random Agent](gomoku.gif)
+<!-- ![UCB Agent vs. Random Agent](gomoku.gif) -->
 
 Clearly this agent does not perform nearly as well as Google Deepmind's AlphaGo.
 However, we also didn't have access to the computing power of 1920 CPUs and 

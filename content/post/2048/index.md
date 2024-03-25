@@ -102,33 +102,33 @@ Example heuristics value:
 There of course exists more heuristics to consider, but these are a good
 starting point.
 
-### Computation
-Together,
-this information allows the algorithm will search for the best move. In the 
-case of this project, we limit
-the depth of the tree to be three, as building and exploring a tree deeper than
-that is computationally expensive.
+<!-- ### Computation -->
+<!-- Together, -->
+<!-- this information allows the algorithm will search for the best move. In the --> 
+<!-- case of this project, we limit -->
+<!-- the depth of the tree to be three, as building and exploring a tree deeper than -->
+<!-- that is computationally expensive. -->
 
-Here we can see some examples of the expectimax agent in action:
+<!-- Here we can see some examples of the expectimax agent in action: -->
 
-![4x4 Board](4x4.gif)
-![5x5 Board](5x5.gif)
-![6x6 Board](6x6.gif)
-![7x7 Board](7x7.gif)
+<!-- ![4x4 Board](4x4.gif) -->
+<!-- ![5x5 Board](5x5.gif) -->
+<!-- ![6x6 Board](6x6.gif) -->
+<!-- ![7x7 Board](7x7.gif) -->
 
-Notice how on smaller boards the expectimax agent runs noticeably faster,
-gathering points more easily. As previously mentioned, this is due to the number
-of probable outcomes and actions calculated by the tree. Consider the 4x4 game
-board. In each iteration of the tree, we see 4 possible moves followed by 
-4 x 4 = 16 possible locations where a new square can spawn (although squares
-will be occupied decreasing this number over time). As a result, over three
-iterations of the tree, we have approximately
-$$ 4^3(4^2)^3 = 262,144 \text{ nodes} $$
-Using similar logic, we have
-$$ 4^3(5^2)^3 \approx 1,000,000 \text{ nodes} $$
-$$ 4^3(6^2)^3 \approx 3,000,000 \text{ nodes} $$
-$$ 4^3(7^2)^3 \approx 7,500,000 \text{ nodes} $$
-For the 5x5, 6x6, and 7x7 boards respectively.
+<!-- Notice how on smaller boards the expectimax agent runs noticeably faster, -->
+<!-- gathering points more easily. As previously mentioned, this is due to the number -->
+<!-- of probable outcomes and actions calculated by the tree. Consider the 4x4 game -->
+<!-- board. In each iteration of the tree, we see 4 possible moves followed by --> 
+<!-- 4 x 4 = 16 possible locations where a new square can spawn (although squares -->
+<!-- will be occupied decreasing this number over time). As a result, over three -->
+<!-- iterations of the tree, we have approximately -->
+<!-- $$ 4^3(4^2)^3 = 262,144 \text{ nodes} $$ -->
+<!-- Using similar logic, we have -->
+<!-- $$ 4^3(5^2)^3 \approx 1,000,000 \text{ nodes} $$ -->
+<!-- $$ 4^3(6^2)^3 \approx 3,000,000 \text{ nodes} $$ -->
+<!-- $$ 4^3(7^2)^3 \approx 7,500,000 \text{ nodes} $$ -->
+<!-- For the 5x5, 6x6, and 7x7 boards respectively. -->
 
 ### Optimization
 Evidently, the number of computations grows exponentially by scaling board size
