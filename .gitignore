@@ -6,3 +6,6 @@ assets/jsconfig.json
 
 # Local Netlify folder
 .netlify
+
+node_modules/
+*.json
