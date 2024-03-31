@@ -14,11 +14,16 @@ export function changeAlpha(originalColor, newAlpha) {
   }
 }
 
-export function gaussianRandom(standardDeviation) {
+function seededRandom(seed) {
+  let x = Math.sin(seed) * 10000;
+  return x - Math.floor(x);
+}
+
+export function gaussianRandom(standardDeviation, seed = Math.random()) {
   let u = 0,
     v = 0;
-  while (u === 0) u = Math.random();
-  while (v === 0) v = Math.random();
+  while (u === 0) u = seededRandom(seed++);
+  while (v === 0) v = seededRandom(seed++);
   let num = Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
   let num2 = Math.sqrt(-2.0 * Math.log(u)) * Math.sin(2.0 * Math.PI * v);
   return [num * standardDeviation, num2 * standardDeviation];

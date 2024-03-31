@@ -45,7 +45,7 @@ export function runKMeans(canvas, ctx, centroids, points) {
   }
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawVoronoi(canvas, ctx, centroids);
+  drawVoronoi(canvas, ctx, centroids, 1);
 
   points.forEach((point) => drawPoint(ctx, point.x, point.y));
   centroids.forEach((centroid, index) =>

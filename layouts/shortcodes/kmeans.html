@@ -13,11 +13,23 @@
         <canvas id="canvas"></canvas>
         <canvas id="cursorCanvas"></canvas>
       </div>
-      <button id="runBtn">Run</button>
-      <button id="clearBtn">Clear Points</button>
-      <button id="centroidBtn">Draw Centroids</button>
-      <button id="gaussianBtn">Draw Gaussian</button>
-      <div id="output"></div>
+      <div class="button-container">
+        <button id="runBtn">Run</button>
+        <button id="clearBtn">Clear</button>
+        <button id="centroidBtn">Draw Centroids</button>
+        <button id="gaussianBtn">Draw Point Cloud</button>
+        <input type="number" value="100" class="number-input" id="cloudInput" />
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="25"
+          class="slider"
+          id="stdSlider"
+        />
+        <span>$\sigma$:</span>
+        <span id="output">25</span>
+      </div>
     </div>
 
     {{ $js := resources.Get "kmeans/js/utils.js" | js.Build | minify }}

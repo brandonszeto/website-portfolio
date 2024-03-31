@@ -22,17 +22,35 @@ canvas {
 }
 
 #canvas {
-  z-index: 1; /* Lower layer */
+  z-index: 1;
 }
 
 #cursorCanvas {
-  z-index: 2; /* Upper layer */
+  z-index: 2;
   background-color: transparent;
 }
 
-#clearBtn,
 #runBtn,
+#clearBtn {
+  margin-top: 25px;
+  width: 60px;
+}
 #centroidBtn,
 #gaussianBtn {
   margin-top: 25px;
+  width: 150px;
+}
+
+.number-input {
+  width: 75px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.number-input::-webkit-inner-spin-button,
+.number-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
