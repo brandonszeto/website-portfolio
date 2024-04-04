@@ -1,4 +1,4 @@
-import { euclideanDistance } from "./utils.js";
+import { squaredDistance } from "./utils.js";
 import {
   drawVoronoi,
   drawPoint,
@@ -17,7 +17,7 @@ export function runKMeans(canvas, ctx, centroids, points) {
     let minDist = Infinity;
     let closestCentroid = -1;
     for (let j = 0; j < centroids.length; j++) {
-      let dist = euclideanDistance(
+      let dist = squaredDistance(
         points[i].x,
         points[i].y,
         centroids[j].x,
@@ -45,7 +45,7 @@ export function runKMeans(canvas, ctx, centroids, points) {
   }
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawVoronoi(canvas, ctx, centroids, 1);
+  drawVoronoi(canvas, ctx, centroids, 1, 8);
 
   points.forEach((point) => drawPoint(ctx, point.x, point.y));
   centroids.forEach((centroid, index) =>

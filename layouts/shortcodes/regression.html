@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>K-Means Canvas</title>
+    {{ $css := resources.Get "kmeans/css/kmeans.css" | minify | fingerprint}}
+    <link rel="stylesheet" href="{{ $css.Permalink }}" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="canvas-container">
+        <canvas id="canvas"></canvas>
+        <canvas id="cursorCanvas"></canvas>
+      </div>
+      <div class="button-container">
+        <button id="runBtn">Run</button>
+        <button id="clearBtn">Clear</button>
+        <button id="centroidBtn">Draw Centroids</button>
+        <button id="gaussianBtn">Draw Point Cloud</button>
+        <input type="number" value="100" class="number-input" id="cloudInput" />
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="25"
+          class="slider"
+          id="stdSlider"
+        />
+        <span>$\sigma$:</span>
+        <span id="output">25</span>
+      </div>
+    </div>
+
+    {{ $js := resources.Get "kmeans/js/utils.js" | js.Build | minify }}
+    <script src="{{ $js.Permalink }}"></script>
+    {{ $js := resources.Get "kmeans/js/draw.js" | js.Build | minify }}
+    <script src="{{ $js.Permalink }}"></script>
+    {{ $js := resources.Get "kmeans/js/kmeans.js" | js.Build | minify }}
+    <script src="{{ $js.Permalink }}"></script>
+    {{ $js := resources.Get "kmeans/js/app.js" | js.Build | minify }}
+    <script src="{{ $js.Permalink }}"></script>
+  </body>
+</html>

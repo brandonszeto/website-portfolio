@@ -50,12 +50,10 @@ function resizeCanvas(canvas) {
 }
 
 window.onload = function () {
-  // Setup content canvas
   canvas = document.getElementById("canvas");
   ctx = canvas.getContext("2d");
   setupCanvas(canvas, ctx);
 
-  // Setup cursor canvas
   cursorCanvas = document.getElementById("cursorCanvas");
   cursorCtx = cursorCanvas.getContext("2d");
   setupCanvas(cursorCanvas, cursorCtx);
@@ -97,7 +95,9 @@ window.onload = function () {
   });
 
   document.getElementById("runBtn").addEventListener("click", function () {
+    // console.time('runKMeans');
     runKMeans(canvas, ctx, centroids, points);
+    // console.timeEnd('runKMeans');
   });
 
   document

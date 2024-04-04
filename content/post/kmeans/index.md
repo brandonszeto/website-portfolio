@@ -7,7 +7,8 @@ tags : [
     javascript
 ]
 categories : [
-    Machine Learning
+    Machine Learning,
+    Interactive
 ]
 image : "kmeans.png"
 math: true
