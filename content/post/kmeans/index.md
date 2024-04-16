@@ -22,8 +22,8 @@ toc: false
 - `run` runs the algoirthm after data and centroids have been drawn.
 - `clear` clears the screen and resets the data.
 - `Draw Centroids` toggles centroid drawing mode.
-- `Draw Single Point` toggles single point drawing mode.
-- `Draw Point Cloud` toggles point cloud drawing mode. The number of points can
+- `Draw Point` toggles single point drawing mode.
+- `Draw Cluster` toggles point cloud drawing mode. The number of points can
   be adjusted in the number input. The standard deviation can be adjusted by the
   slider.
 

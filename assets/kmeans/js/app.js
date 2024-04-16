@@ -33,9 +33,7 @@ function toggleGaussian() {
   }
   drawingGaussian = !drawingGaussian;
   const gaussianBtn = document.getElementById("gaussianBtn");
-  gaussianBtn.innerHTML = drawingGaussian
-    ? "Draw Single Point"
-    : "Draw Point Cloud";
+  gaussianBtn.innerHTML = drawingGaussian ? "Draw Point" : "Draw Cluster";
 }
 
 function setupCanvas(canvas, ctx) {
