@@ -141,6 +141,7 @@ canvas {
 
 #output {
   margin-left: 5px;
+  min-width: 3ch;
 }
 
 #sigma {
