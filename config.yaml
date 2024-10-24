@@ -203,6 +203,11 @@ menu:
           url: https://leetcode.com/bszeto/          
           params:
               icon: brand-leetcode
+        - identifier: twitter
+          name: Twitter
+          url: https://x.com/BrandonSzeto1 
+          params:
+              icon: brand-twitter
 
 related:
     includeNewer: true
