@@ -16,7 +16,7 @@ menu:
 toc: false
 ---
 
-Graduate student at **[UCSD](ucsd.edu)** (coursework [here](https://brandonszeto.com/coursework/)); currently studying **[intelligent
+Graduate student at **[UCSD](https://ucsd.edu)** (coursework [here](https://brandonszeto.com/coursework/)); currently studying **[intelligent
 systems, robotics & controls](https://www.ece.ucsd.edu/faculty-research/ece-research-areas/intelligent-systems-robotics-control-impacted)**. I'm broadly interested in autonomy, controls, reinforcement learning, distributed/embedded systems, and machine learning.
 
 Some of my current and past work include:
