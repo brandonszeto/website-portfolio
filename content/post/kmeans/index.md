@@ -1,7 +1,8 @@
 ---
 author : "Brandon Szeto"
-title : "Study on K-Means Clustering"
+title : "k-means clustering"
 date : "2024-03-25"
+description : "An interactive demo on k-means clustering"
 math: true
 toc: false
 readingtime: false

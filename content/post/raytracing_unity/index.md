@@ -1,8 +1,9 @@
 ---
 author : "Brandon Szeto"
-title : "GPU Ray Tracing in Unity"
+title : "gpu ray tracing"
 date : "2023-07-29"
 math: true
+description: "Parallelizing compute shaders in Unity for beautiful renders."
 toc: true
 readingtime: false
 ---
