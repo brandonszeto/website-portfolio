@@ -2,10 +2,9 @@
 author : "Brandon Szeto"
 title : "GPU Ray Tracing in Unity"
 date : "2023-07-29"
-description : "A simple ray tracer written from scratch using compute shaders in unity."
-image : "raytracing.png"
 math: true
 toc: true
+readingtime: false
 ---
 
 ## Introduction

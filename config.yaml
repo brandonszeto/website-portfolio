@@ -1,7 +1,6 @@
 baseurl: https://brandonszeto.com
 languageCode: en-us
 theme: hugo-theme-stack
-paginate: 5
 title: Brandon Szeto
 timeout: 100000
 
@@ -55,7 +54,7 @@ params:
             default: Licensed under CC BY-NC-SA 4.0
 
     comments:
-        enabled: true
+        enabled: false
         provider: giscus
 
         disqusjs:
@@ -145,12 +144,7 @@ params:
     widgets:
         homepage:
             - type: search
-            - type: archives
-              params:
-                  limit: 5
-            - type: categories
-              params:
-                  limit: 10
+            - type: toc
         page:
             - type: toc
 
@@ -207,7 +201,7 @@ menu:
           name: Twitter
           url: https://x.com/BrandonSzeto1 
           params:
-              icon: brand-twitter
+              icon: brand-x
 
 related:
     includeNewer: true
