@@ -20,13 +20,13 @@ toc: false
 A grad student studying **[intelligent systems, robotics & controls](https://www.ece.ucsd.edu/faculty-research/ece-research-areas/intelligent-systems-robotics-control-impacted)**. I'm constantly learning about autonomy, controls, reinforcement learning, distributed systems, and machine learning. I love facing technical challenges both in industry and academia. Outside of engineering, I am training for a triathalon, biohacking, and spending time with my friends and family.
 
 ### Work
-> 06/2025 &ensp; {{< emoji src="/images/meta.png" alt="emoji" width="35" height="35" >}} &nbsp; [Meta](https://meta.com) — Software Engineer Intern
+> 06/2025 &ensp; {{< emoji src="/images/meta.png" alt="emoji" width="35" height="35" >}} &nbsp; [Meta](https://meta.com) — SWE Intern
 >
-> 01/2025 &ensp; {{< emoji src="/images/rivian.png" alt="emoji" width="35" height="35" >}} &nbsp; [Rivian](https://rivian.com) — Automation/Controls Intern
+> 01/2025 &ensp; {{< emoji src="/images/rivian.png" alt="emoji" width="35" height="35" >}} &nbsp; [Rivian](https://rivian.com) — Controls Intern
 >
 > 07/2024 &ensp; {{< emoji src="/images/intel.png" alt="emoji" width="35" height="35" >}} &nbsp; [Intel](https://www.intel.com/content/www/us/en/homepage.html) — Data Science Intern
 >
-> 05/2024 &ensp; {{< emoji src="/images/esri.png" alt="emoji" width="35" height="35" >}} &nbsp; [Esri](https://www.esri.com/en-us/home) — Software Engineer Intern
+> 05/2024 &ensp; {{< emoji src="/images/esri.png" alt="emoji" width="35" height="35" >}} &nbsp; [Esri](https://www.esri.com/en-us/home) — SWE Intern
 
 ### Academia
 
