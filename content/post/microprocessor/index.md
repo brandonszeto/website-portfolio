@@ -1,6 +1,6 @@
 ---
 author : "Brandon Szeto"
-title : "nine-bit microprocessor"
+title : "Nine-Bit Microprocessor"
 date : "2023-06-15"
 description: "Custom-designed hardware, instruction set, and assembler for
 Hamming forward error correction. "

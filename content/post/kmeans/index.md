@@ -1,8 +1,9 @@
 ---
 author : "Brandon Szeto"
-title : "k-means clustering"
+title : "K-means clustering"
 date : "2024-03-25"
-description : "An interactive demo on k-means clustering"
+description : "An interactive demonstration of K-means clustering powered by Lloyd’s algorithm. Add data points to watch the algorithm dynamically assign points to the nearest centroid and recalculate cluster centers until the clusters stabilize—or shift as new points are added."
+
 math: true
 toc: false
 readingtime: false
