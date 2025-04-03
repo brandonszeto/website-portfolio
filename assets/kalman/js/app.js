@@ -1,7 +1,6 @@
 
-// Import necessary functions/classes
 import { drawPoint } from "./draw.js";
-import { KalmanFilter2D } from './kalman.js'; // Import the Kalman Filter class
+import { KalmanFilter2D } from './kalman.js'; 
 
 // --- Canvas Setup ---
 function setupCanvas(canvas, ctx) {
@@ -37,13 +36,10 @@ let hasMoved = false;
 
 // --- Instantiate the Kalman Filter ---
 // Initial noise values will be overwritten by slider defaults in window.onload
-const kf = new KalmanFilter2D(); // Use default constructor values for now
+const kf = new KalmanFilter2D();
 
 
 // --- Trail Update Functions ---
-// updateBlueTrail, addRedSamplePoint, handleSampling
-// remain EXACTLY the same as the previous version.
-// ... (Keep the existing updateBlueTrail function) ...
 function updateBlueTrail(x, y) {
     const now = Date.now();
     blueTrail.push({ x, y, time: now });
@@ -52,7 +48,6 @@ function updateBlueTrail(x, y) {
     }
 }
 
-// ... (Keep the existing addRedSamplePoint function) ...
 function addRedSamplePoint(currentTime) {
     if (!hasMoved) return;
     const varianceX = (Math.random() - 0.5) * 2 * maxVariance;
@@ -86,7 +81,6 @@ function addRedSamplePoint(currentTime) {
     }
 }
 
-// ... (Keep the existing handleSampling function) ...
 function handleSampling() {
     const now = Date.now();
     while (now >= lastSampleTime + sampleRate) {
@@ -98,11 +92,9 @@ function handleSampling() {
 
 
 // --- Drawing Function ---
-// drawTrails function remains EXACTLY the same as the previous version.
-// ... (Keep the existing drawTrails function and its helpers) ...
 function drawTrails(ctx) {
     const now = Date.now();
-    const drawLines = (trail, color) => { /* ... same ... */
+    const drawLines = (trail, color) => {
         if (trail.length >= 2) {
             ctx.lineWidth = 1;
             for (let i = 0; i < trail.length - 1; i++) {
@@ -115,7 +107,7 @@ function drawTrails(ctx) {
             }
         }
     };
-    const drawPoints = (trail, color) => { /* ... same ... */
+    const drawPoints = (trail, color) => {
         for (let i = 0; i < trail.length; i++) {
             const p = trail[i]; const age = now - p.time; const alpha = Math.max(0, 1 - age / TRAIL_DURATION);
             if (alpha > 0) drawPoint(ctx, p.x, p.y, `${color}${alpha})`, 3);
@@ -142,49 +134,40 @@ window.onload = function() {
   initializeCanvases();
 
   // Handle Resizing
-  let resizeTimeout; window.addEventListener('resize', () => { /* ... same ... */
+  let resizeTimeout; window.addEventListener('resize', () => { 
       clearTimeout(resizeTimeout); resizeTimeout = setTimeout(initializeCanvases, 100);
   });
 
   // --- Slider Setup ---
-  // Existing Sliders
   const sampleRateSlider = document.getElementById('sampleRateSlider');
   const sampleRateOutput = document.getElementById('sampleRateOutput');
   const varianceSlider = document.getElementById('varianceSlider');
   const varianceOutput = document.getElementById('varianceOutput');
-
-  // **** NEW SLIDER REFERENCES ****
   const measurementNoiseSlider = document.getElementById('measurementNoiseSlider');
   const measurementNoiseOutput = document.getElementById('measurementNoiseOutput');
   const processNoiseSlider = document.getElementById('processNoiseSlider');
   const processNoiseOutput = document.getElementById('processNoiseOutput');
 
-  // Initialize slider values and displays
   sampleRateOutput.textContent = sampleRateSlider.value;
   sampleRate = parseInt(sampleRateSlider.value, 10);
   varianceOutput.textContent = varianceSlider.value;
   maxVariance = parseInt(varianceSlider.value, 10);
 
-  // **** INITIALIZE NOISE DISPLAYS and SET KF NOISE ****
   measurementNoiseOutput.textContent = parseFloat(measurementNoiseSlider.value).toFixed(2);
   processNoiseOutput.textContent = parseFloat(processNoiseSlider.value).toExponential(2);
-  // Set the Kalman Filter's initial noise parameters from the slider defaults
   kf.setMeasurementNoise(parseFloat(measurementNoiseSlider.value));
   kf.setProcessNoise(parseFloat(processNoiseSlider.value));
 
 
   // --- Slider Event Listeners ---
-  // Existing Listeners
-  sampleRateSlider.addEventListener('input', function() { /* ... same ... */
+  sampleRateSlider.addEventListener('input', function() { 
     sampleRate = parseInt(this.value, 10); sampleRateOutput.textContent = this.value;
     if (hasMoved) lastSampleTime = Date.now();
   });
-  varianceSlider.addEventListener('input', function() { /* ... same ... */
+  varianceSlider.addEventListener('input', function() { 
     maxVariance = parseInt(this.value, 10); varianceOutput.textContent = this.value;
-    // Note: We removed the direct link from variance to KF measurement noise
   });
 
-  // **** NEW SLIDER LISTENERS ****
   measurementNoiseSlider.addEventListener('input', function() {
       const noiseValue = parseFloat(this.value);
       measurementNoiseOutput.textContent = noiseValue.toFixed(2); // Format output
@@ -193,9 +176,8 @@ window.onload = function() {
 
   processNoiseSlider.addEventListener('input', function() {
       const noiseValue = parseFloat(this.value);
-      // Use exponential notation for small process noise values for better readability
       processNoiseOutput.textContent = noiseValue.toExponential(2);
-      kf.setProcessNoise(noiseValue); // Update KF instance
+      kf.setProcessNoise(noiseValue); 
   });
 
 
@@ -230,8 +212,7 @@ window.onload = function() {
 
 
   // --- Mouse Event Listeners ---
-  // (mouseenter, mousemove, mouseleave listeners remain the same as previous version)
-  cursorCanvas.addEventListener("mouseenter", (event) => { /* ... same ... */
+  cursorCanvas.addEventListener("mouseenter", (event) => { 
     cursorCanvas.style.cursor = "none";
     if (!hasMoved) {
         const rect = cursorCanvas.getBoundingClientRect();
@@ -240,24 +221,23 @@ window.onload = function() {
         kf.isInitialized = false; greenTrail.length = 0;
     }
   });
-  cursorCanvas.addEventListener("mousemove", function (event) { /* ... same ... */
+  cursorCanvas.addEventListener("mousemove", function (event) {
     const rect = cursorCanvas.getBoundingClientRect(); const currentX = (event.clientX - rect.left); const currentY = (event.clientY - rect.top);
     lastKnownX = currentX; lastKnownY = currentY; hasMoved = true;
     cursorCtx.clearRect(0, 0, cursorCanvas.width, cursorCanvas.height); drawPoint(cursorCtx, currentX, currentY, 'black', 3);
     updateBlueTrail(currentX, currentY);
   });
-  cursorCanvas.addEventListener("mouseleave", () => { /* ... same ... */
+  cursorCanvas.addEventListener("mouseleave", () => { 
     cursorCtx.clearRect(0, 0, cursorCanvas.width, cursorCanvas.height); cursorCanvas.style.cursor = "default";
   });
 
 
   // --- Animation Loop ---
-  // (animate function remains the same as previous version)
   function animate() {
     if (hasMoved) { handleSampling(); }
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawTrails(ctx);
     requestAnimationFrame(animate);
   }
-  animate(); // Start the loop!
+  animate();
 };
