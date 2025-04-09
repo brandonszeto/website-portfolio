@@ -37,3 +37,5 @@ A grad student studying **[intelligent systems, robotics & controls](https://www
 > 09/2021 &ensp; **[UCSD](http://erl.ucsd.edu)**: B.S. Computer Engineering
 >
 > Completed coursework [here](https://brandonszeto.com/coursework/)
+
+{{< sandbox >}}

@@ -1,0 +1,20 @@
+<!-- sandbox.html -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <title>Three.js Sandbox</title>
+    {{ $css := resources.Get "sandbox/css/sandbox.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $css.Permalink }}" />
+  </head>
+  <body>
+    <!-- This div will hold the Three.js canvas -->
+    <div id="three-container"></div>
+
+    <!-- Your script loading remains the same -->
+    {{ $js := resources.Get "sandbox/js/app.js" | js.Build | minify }}
+    <script type="module" src="{{ $js.Permalink }}"></script>
+  </body>
+</html>

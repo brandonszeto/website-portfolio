@@ -8,4 +8,3 @@ assets/jsconfig.json
 .netlify
 
 node_modules/
-*.json

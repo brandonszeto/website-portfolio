@@ -48,8 +48,6 @@
       </div>
     </div>
 
-    {{ $js := resources.Get "kalman/js/utils.js" | js.Build | minify }}
-    <script src="{{ $js.Permalink }}"></script>
     {{ $js := resources.Get "kalman/js/draw.js" | js.Build | minify }}
     <script src="{{ $js.Permalink }}"></script>
     {{ $js := resources.Get "kalman/js/kalman.js" | js.Build | minify }}
