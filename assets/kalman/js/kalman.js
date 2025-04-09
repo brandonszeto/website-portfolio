@@ -1,5 +1,4 @@
 // Simple Kalman Filter for 2D Position/Velocity Tracking
-// Use 'export' to make the class available for import
 export class KalmanFilter2D {
     constructor({ processNoise = 1e-2, measurementNoise = 1e-1 } = {}) {
         // State: [x, y, vx, vy]' (position and velocity)
@@ -16,8 +15,7 @@ export class KalmanFilter2D {
         // Updated dynamically based on dt in predict()
         this.F = [
             [1, 0, 0, 0], // x = x + vx*dt
-            [0, 1, 0, 0], // y = y + vy*dt
-            [0, 0, 1, 0], // vx = vx
+            [0, 1, 0, 0], // y = y + vy*dt [0, 0, 1, 0], // vx = vx
             [0, 0, 0, 1]  // vy = vy
         ];
 

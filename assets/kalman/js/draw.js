@@ -1,18 +1,3 @@
-// export function drawPoint(ctx, x, y) {
-//   ctx.fillStyle = "rgb(66, 66, 66)";
-//   ctx.beginPath();
-//   ctx.arc(x, y, 3, 0, Math.PI * 2);
-//   ctx.stroke();
-//   ctx.closePath();
-// }
-
-// export function drawPoint(ctx, x, y, color = 'black', radius = 5) {
-//   ctx.beginPath();
-//   ctx.arc(x, y, radius, 0, Math.PI * 2);
-//   ctx.fillStyle = color;
-//   ctx.fill();
-// }
-
 export function drawPoint(ctx, x, y, color = 'black', radius = 5) {
   ctx.beginPath();
   ctx.arc(x, y, radius, 0, Math.PI * 2);
