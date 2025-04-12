@@ -14,69 +14,77 @@
                 <canvas id="canvas"></canvas>
             </div>
             <div class="button-container">
-                <div class="slider-container">
-                    <label for="sampleRateSlider">Sample Rate:</label>
-                    <!-- Clarified Label -->
-                    <input
-                        type="range"
-                        min="10"
-                        max="500"
-                        step="5"
-                        value="50"
-                        class="slider"
-                        id="sampleRateSlider"
-                    />
-                    <span id="sampleRateOutput">50</span> ms
+                <div class="slider-group">
+                    <div class="slider-container">
+                        <label for="sampleRateSlider">Sample Rate:</label>
+                        <input
+                            type="range"
+                            min="10"
+                            max="500"
+                            step="5"
+                            value="50"
+                            class="slider"
+                            id="sampleRateSlider"
+                        />
+                        <span id="sampleRateOutput">50</span> ms
+                    </div>
+                    <div class="slider-container">
+                        <label for="varianceSlider">Variance:</label>
+                        <input
+                            type="range"
+                            min="0"
+                            max="50"
+                            step="1"
+                            value="35"
+                            class="slider"
+                            id="varianceSlider"
+                        />
+                        <span id="varianceOutput">35</span> px
+                    </div>
+                    <div class="slider-container">
+                        <label for="measurementNoiseSlider"
+                            >Measurement Noise $\mathbf{R}$:</label
+                        >
+                        <input
+                            type="range"
+                            min="0.01"
+                            max="1"
+                            step="0.01"
+                            value="0.75"
+                            class="slider"
+                            id="measurementNoiseSlider"
+                        />
+                        <span id="measurementNoiseOutput">.75</span>
+                    </div>
+                    <div class="slider-container">
+                        <label for="processNoiseSlider"
+                            >Process Noise $\mathbf{Q}$:</label
+                        >
+                        <input
+                            type="range"
+                            min="0.0001"
+                            max="1"
+                            step="0.0001"
+                            value="0.1"
+                            class="slider"
+                            id="processNoiseSlider"
+                        />
+                        <span id="processNoiseOutput">1.00e-1</span>
+                    </div>
                 </div>
-                <div class="slider-container">
-                    <label for="varianceSlider">Variance:</label>
-                    <input
-                        type="range"
-                        min="0"
-                        max="50"
-                        step="1"
-                        value="35"
-                        class="slider"
-                        id="varianceSlider"
-                    />
-                    <span id="varianceOutput">35</span> px
+                <div class="toggle-group">
+                    <button id="toggleBlueButton" class="btn toggle-btn">
+                        Toggle Blue
+                    </button>
+                    <button id="toggleRedButton" class="btn toggle-btn">
+                        Toggle Red
+                    </button>
+                    <button id="toggleGreenButton" class="btn toggle-btn">
+                        Toggle Green
+                    </button>
                 </div>
-                <div class="slider-container">
-                    <label for="measurementNoiseSlider"
-                        >Measurement Noise $\mathbf{R}$:
-                    </label>
-                    <input
-                        type="range"
-                        min="0.01"
-                        max="1"
-                        step="0.01"
-                        value="0.75"
-                        class="slider"
-                        id="measurementNoiseSlider"
-                    />
-                    <span id="measurementNoiseOutput">.75</span>
-                </div>
-                <div class="slider-container">
-                    <label for="processNoiseSlider"
-                        >Process Noise $\mathbf{Q}$:
-                    </label>
-                    <input
-                        type="range"
-                        min="0.0001"
-                        max="1"
-                        step="0.0001"
-                        value="0.1"
-                        class="slider"
-                        id="processNoiseSlider"
-                    />
-                    <span id="processNoiseOutput">1.00e-1</span>
-                </div>
-                <button id="toggleBlueButton" class="btn">Toggle Blue</button>
-                <button id="toggleRedButton" class="btn">Toggle Red</button>
-                <button id="toggleGreenButton" class="btn">Toggle Green</button>
             </div>
         </div>
-
         {{ $js := resources.Get "kalman/js/draw.js" | js.Build | minify }}
         <script type="module" src="{{ $js.Permalink }}"></script>
         {{ $js := resources.Get "kalman/js/kalman.js" | js.Build | minify }}
