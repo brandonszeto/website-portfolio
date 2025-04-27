@@ -4,8 +4,9 @@ title : "GPU Ray Tracing"
 date : "2023-07-29"
 math: true
 description: "Parallelizing compute shaders in Unity for beautiful renders."
-toc: true
+toc: false
 readingtime: false
+draft: true
 ---
 
 ## Introduction
@@ -19,21 +20,21 @@ tradeoffs. Today, we will be looking at ray-tracing.
 
 In the real-world, photons collide with objects where it will
 be reflected or refracted while losing some energy along the way. Eventually,
-the photons end up in a camera's image sensor which in turn produces an image. 
+the photons end up in a camera's image sensor which in turn produces an image.
 Ray-tracing aims to simulate the physics of real-world optics by tracing the
 path of rays to the camera. However, simulating every individual photon emitted
 from a light source is computationally expensive. In our simulation, we can use
-the principle of 
-[Helmholtz reciprocity](https://en.wikipedia.org/wiki/Helmholtz_reciprocity) 
+the principle of
+[Helmholtz reciprocity](https://en.wikipedia.org/wiki/Helmholtz_reciprocity)
 to instead only shoot rays from the
 camera into the scene that will hit a light source. This, in combination with
 offloading computational load to GPUs have made ray-tracing one of the most
 popular rendering techniques to this day.
 
-### C# Script 
+### C# Script
 Let's leverage an existing game engine, [Unity](https://unity.com), to play with
 ray-tracing. This allows us access to features like an editor and asset
-manager to simplify our development. 
+manager to simplify our development.
 
 In a new Unity project, I created a C# script. Here, we declare a couple of
 things:
@@ -89,7 +90,7 @@ private void InitRenderTexture()
 }
 ```
 `Render()` is responsible for ray-tracing and displaying the result. Notably,
-it 
+it
 - Calls `InitRenderTexture()` to ensure that `_target` is properly
   initialized
 - Sets `_target` to a parameter called "Result" in the compute
@@ -97,7 +98,7 @@ it
 - Calculates the number of thread groups needed for the compute shader
   based on screen dimensions
 - Dispatches the compute shader, with a specified kernel index and number of
-  thread groups in the x and y dimensions 
+  thread groups in the x and y dimensions
 - Copies the content of the `_target` texture to the destination, displaying the
   result on the screen
 
@@ -107,7 +108,7 @@ private void Render(RenderTexture destination)
     InitRenderTexture();
 
     RayTracingShader.SetTexture(0, "Result", _target);
-    
+
     int threadGroupsX = Mathf.CeilToInt(Screen.width / 8.0f);
     int threadGroupsY = Mathf.CeilToInt(Screen.height / 8.0f);
 
@@ -130,7 +131,7 @@ camera.
     - `_camera.projectionMatrix.inverse` represents the inverse of the camera's
       projection matrix. This will also be useful for ray-tracing calculations,
       like reconstructing the rays in world space from screen coordinates.
-      
+
 Note: *These matrices are not matrices of pixels, but rather represent transformation
   and projection information to aid with manipulating points and vectors in 3D
   space.*
@@ -207,7 +208,7 @@ direction of a `Ray` from the camera's perspective to the world space.
 Ray CreateCameraRay(float2 uv)
 {
     float3 origin = mul(_CameraToWorld, float4(0.0f, 0.0f, 0.0f, 1.0f)).xyz;
-    
+
     float3 direction = mul(_CameraInverseProjection, float4(uv, 0.0f, 1.0f)).xyz;
     direction = mul(_CameraToWorld, float4(direction, 0.0f)).xyz;
     direction = normalize(direction);
@@ -304,8 +305,8 @@ Now, let's add the ground plane. Here, we are creating a ground plane by finding
 the point of intersection between a ray and a plane at $y = 0$, then updating
 the bestHit given that the intersection is both positive and closer than all
 previous hits.
-- We can think of finding the intersection as the following linear equation: 
-`ray.direction.y * t + ray.origin.y = 0` of the form $mx + b$. 
+- We can think of finding the intersection as the following linear equation:
+`ray.direction.y * t + ray.origin.y = 0` of the form $mx + b$.
 
 ```csharp
 void IntersectGroundPlane(Ray ray, inout RayHit bestHit)
@@ -365,7 +366,7 @@ Result[id.xy] = float4(result, 1);
 ```
 
 ## Sphere
-To implement a basic sphere, we will use 
+To implement a basic sphere, we will use
 [line-sphere intersection](https://en.wikipedia.org/wiki/Line–sphere_intersection).
 There exist two possible collisions: the entry point and the exit point. We will
 use the entry point first and only use the exit point if the other one is not
@@ -420,7 +421,7 @@ Shader "Hidden/AddShader"
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
-			
+
 			#include "UnityCG.cginc"
 
 			struct appdata
@@ -442,7 +443,7 @@ Shader "Hidden/AddShader"
 				o.uv = v.uv;
 				return o;
 			}
-			
+
 			sampler2D _MainTex;
 			float _Sample;
 
@@ -459,7 +460,7 @@ This is mostly default settings other than the lines:
 ```csharp
 Blend SrcAlpha OneMinusSrcAlpha
 ```
-and 
+and
 ```csharp
 float _Sample;
 
@@ -737,7 +738,7 @@ We setup the scene in `OnEnable`, and release the buffer in `OnDisable`. The
 `SetUpScene` function will try to position spheres in the provided radius, and
 reject those that would intersect with spheres that already exist. Half of the
 spheres will be metallic, and the other half will be non-metallic. `40`
-represents the byte size of one sphere in memory. Finally, we need to set the 
+represents the byte size of one sphere in memory. Finally, we need to set the
 buffer on the shader in `SetShaderParameters` like:
 ```csharp
 RayTracingShader.SetBuffer(0, "_Spheres", _sphereBuffer);
@@ -755,5 +756,7 @@ As for now, the learning resources I used to get this setup include:
 - Wikipedia
 - [Three Eyes Games](http://three-eyed-games.com/2018/05/03/gpu-ray-tracing-in-unity-part-1/)
 
-The source code for this blog can be found 
+The source code for this blog can be found
 [here](https://github.com/brandonszeto/ray-tracing).
+
+{{< scanlines >}}

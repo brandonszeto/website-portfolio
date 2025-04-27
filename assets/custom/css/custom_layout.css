@@ -1,0 +1,121 @@
+:root {
+    --accent-color: #fabd2f;
+    --color-aqua-dark: #689d6a;
+    --color-aqua-light: #8ec07c;
+    --color-bg0: #282828;
+    --color-bg0-h: #1d2021;
+    --color-bg1: #3c3836;
+    --color-bg2: #504945;
+    --color-bg3: #665c54;
+    --color-bg4: #7c6f64;
+    --color-black: #000;
+    --color-blue-light: #83a598;
+    --color-fg1: #ebdbb2;
+    --color-fg0-h: #f9f5d7;
+    --color-gray: #928374;
+    --color-green-light: #b8bb26;
+    --color-orange-light: #fe8019;
+    --color-purple-light: #d3869b;
+    --color-red-light: #fb4934;
+    --color-white: #fff;
+    --color-yellow-light: #fabd2f;
+
+    --card-background: #282828 !important;
+    --card-text-color-main: #ebdbb2 !important;
+    --card-text-color-secondary: #928374 !important;
+    --card-text-color-tertiary: #83a598 !important;
+
+    --blockquote-background-color: #3c3836 !important;
+
+    --body-background: #282828 !important;
+    --body-text-color: #928374 !important;
+    --accent-color: #ebdbb2 !important;
+}
+
+/* Fix weird svg filling of X logo */
+.menu-social li:last-of-type svg {
+    stroke: #rgba(255, 255, 255, 0.7);
+    fill: #rgba(255, 255, 255, 0.7);
+    stroke-width: 2.5px;
+}
+
+.container.main-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+main.main.full-width {
+    width: 100%;
+}
+
+@media (min-width: 800px) {
+    main.main.full-width {
+        max-width: 800px;
+    }
+}
+
+.site-name {
+    padding-top: 10px;
+}
+
+.scanlines {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 2147483647;
+}
+
+.scanlines:after {
+    display: block;
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2147483648;
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        rgba(0, 0, 0, 0.15) 51%
+    );
+    background-size: 100% 4px;
+    animation: scanlines 20s steps(60) infinite;
+}
+
+@keyframes scanlines {
+    0% {
+        background-position: 0 50%;
+    }
+}
+
+.container .site-name a {
+    font-size: 22px;
+}
+
+aside {
+    position: absolute; /* Remove aside from normal flow */
+    left: 0; /* Stick it to the left */
+}
+
+main {
+    /* No special positioning needed if you want it naturally centered */
+}
+
+.article-content h2 {
+    color: var(--color-green-light);
+    border-left: 3px solid var(--color-green-light);
+}
+
+.article-title {
+    font-size: 3rem;
+}

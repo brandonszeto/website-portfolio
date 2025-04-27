@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Euler's Identity Visualization (Rotating Helix)</title>
+        {{ $css := resources.Get "eulers/css/eulers.css" | minify | fingerprint
+        }}
+        <link rel="stylesheet" href="{{ $css.Permalink }}" />
+        <script type="importmap">
+            {
+                "imports": {
+                    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="canvas-container-3d">
+                <canvas id="eulerCanvas3D"></canvas>
+            </div>
+
+            <div class="projection-container">
+                <div class="projection-view">
+                    <canvas id="projXYCanvas"></canvas>
+                </div>
+                <div class="projection-view">
+                    <canvas id="projXZCanvas"></canvas>
+                </div>
+                <div class="projection-view">
+                    <canvas id="projYZCanvas"></canvas>
+                </div>
+            </div>
+        </div>
+
+        {{ $js := resources.Get "eulers/js/app.js" | js.Build | minify }}
+        <script type="module" defer src="{{ $js.Permalink }}"></script>
+    </body>
+</html>

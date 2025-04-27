@@ -1,0 +1,74 @@
+<div class="section work">
+    <div class="header">
+        <h2>work</h2>
+    </div>
+    <div class="content">
+        <div class="experience">
+            <div class="logo-container meta-logo">
+                {{ $meta := resources.Get "icons/meta-logo.svg" }} {{
+                $meta.Content | safeHTML }}  
+            </div>
+            <div class="details">
+                <a href="https://meta.com">meta</a>
+                <div class="line">
+                    <p class="location">
+                        {{ $pin := resources.Get "icons/pin.svg" }} {{
+                        $pin.Content | safeHTML }} seattle, wa
+                    </p>
+                    <p class="duration">06/2025 <--> present</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="experience">
+            <div class="logo-container rivian-logo">
+                {{ $rivian := resources.Get "icons/rivian-logo.svg" }} {{
+                $rivian.Content | safeHTML }}  
+            </div>
+            <div class="details">
+                <a href="https://rivian.com">rivian</a>
+                <div class="line">
+                    <p class="location">
+                        {{ $pin := resources.Get "icons/pin.svg" }} {{
+                        $pin.Content | safeHTML }} irvine, ca
+                    </p>
+                    <p class="duration">01/2025 <--> 06/2025</p>
+                </div>
+            </div>
+        </div>
+        <div class="experience">
+            <div class="logo-container intel-logo">
+                {{ $intel := resources.Get "icons/intel-logo.svg" }} {{
+                $intel.Content | safeHTML }}  
+            </div>
+            <div class="details">
+                <a href="https://www.intel.com/content/www/us/en/homepage.html"
+                    >intel</a
+                >
+                <div class="line">
+                    <p class="location">
+                        {{ $pin := resources.Get "icons/pin.svg" }} {{
+                        $pin.Content | safeHTML }} chandler, az
+                    </p>
+                    <p class="duration">07/2024 <--> 09/2024</p>
+                </div>
+            </div>
+        </div>
+        <div class="experience">
+            <div class="logo-container esri-logo">
+                {{ $esri := resources.Get "icons/esri-logo.svg" }} {{
+                $esri.Content | safeHTML }}  
+            </div>
+            <div class="details">
+                <a href="https://www.esri.com/en-us/home">esri</a>
+                <div class="line">
+                    <p class="location">
+                        {{ $pin := resources.Get "icons/pin.svg" }} {{
+                        $pin.Content | safeHTML }} redlands, ca
+                    </p>
+                    <p class="duration">05/2025 <--> 07/2025</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

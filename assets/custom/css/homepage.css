@@ -1,0 +1,225 @@
+@media (min-width: 600px) {
+    main.main.full-width {
+        max-width: 600px;
+    }
+}
+
+body {
+    color: var(--color-fg1);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+main.main {
+    padding-top: 100px;
+    display: block;
+}
+
+.title-card {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    color: var(--color-fg1);
+}
+
+.title-card h1 {
+    color: var(--color-fg1);
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+.title-card p {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.title-card p.location {
+    color: var(--color-gray);
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.title-card p.location svg {
+    width: 10px;
+    height: 10px;
+    vertical-align: middle;
+}
+
+.title-card p.location svg path {
+    stroke: var(--color-red-light);
+}
+
+.title-card .menu-social li.x-icon svg path {
+    fill: var(--color-gray);
+    stroke-width: 2.5px;
+}
+
+.title-card .menu-social li svg {
+    stroke: var(--color-gray);
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.title-card svg path {
+    stroke-width: 2px;
+}
+
+ul li svg {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+svg {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.experience {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 5px;
+}
+
+.experience a {
+    color: var(--color-fg1);
+    font-size: 18px;
+}
+
+.logo-container {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.rivian-logo svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+.rivian-logo svg path {
+    fill: #fabd2f;
+}
+
+.meta-logo svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+.esri-logo svg {
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+}
+
+a {
+    color: var(--color-fg1);
+}
+
+.work {
+    color: var(--color-fg1);
+}
+
+.work h2 {
+    color: var(--color-green-light);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+
+.posts {
+    color: var(--color-fg1);
+}
+
+.posts h2 {
+    color: var(--color-green-light);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.post {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.post .date {
+    color: var(--color-gray);
+}
+
+.stats {
+    color: var(--color-fg1);
+}
+
+.stats h2 {
+    color: var(--color-green-light);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+
+.content {
+    margin: 15px;
+    /* margin-top: 15px; */
+    /* margin-bottom: 15px; */
+}
+
+.content ul li a {
+    color: var(--color-blue-light);
+}
+
+.location {
+    color: var(--color-gray);
+    font-size: 12px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+.location svg {
+    width: 10px;
+    height: 10px;
+    vertical-align: middle;
+}
+
+.location svg path {
+    stroke: var(--color-red-light);
+}
+
+.duration {
+    color: var(--color-blue-light);
+    font-size: 12px;
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.line p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.details {
+    min-width: 220px;
+}
+
+.sections {
+    margin: 10px;
+}

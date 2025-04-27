@@ -1,0 +1,17 @@
+<div class="section posts">
+    <div class="header">
+        <h2>posts</h2>
+    </div>
+    <div class="content">
+        {{ range first 5 (where .Site.RegularPages "Type" "post") }}
+        <div class="post">
+            <div class="line">
+                <span class="date">{{ .Date.Format "2006-01-02" }}</span>
+                <span class="title">
+                    <a href="{{ .RelPermalink }}">{{lower .Title }}</a>
+                </span>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</div>

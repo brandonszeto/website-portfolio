@@ -1,6 +1,6 @@
 ---
 title: About
-description: 
+description:
 readingTime: False
 license: false
 license.enabled: false
@@ -8,11 +8,6 @@ aliases:
   - about
   - about-me
   - contact
-menu:
-    main: 
-        weight: -90
-        params:
-            icon: user
 toc: false
 ---
 

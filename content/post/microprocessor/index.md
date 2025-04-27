@@ -6,6 +6,8 @@ description: "Custom-designed hardware, instruction set, and assembler for
 Hamming forward error correction. "
 math: true
 readingtime: false
+toc: false
+draft: true
 ---
 
 ## Video Overview
@@ -82,7 +84,7 @@ irreplaceable in our ISA:
 | BNQ     | R    | Branches to the label operand if R1 and R0 are equal
 | SET     | I    | Sets the output register to the six input bits
 
-The outputs of all instructions are put into the `OUT` register. 
+The outputs of all instructions are put into the `OUT` register.
 
 The below operations can all be "emulated" using a series of `NAND` instructions
 through the assembler. For these instructions, a register `AI`
@@ -98,10 +100,10 @@ needed to achieve the desired result.
 For example, `XOR r0 r1` can be emulated using:
 ```
 NAND r0  r1
-MOV  AI  OUT 
+MOV  AI  OUT
 NAND r0  AI
-MOV  AI  OUT 
-NAND r0  r1 
+MOV  AI  OUT
+NAND r0  r1
 NAND OUT r1
 NAND OUT AI
 ```
@@ -173,3 +175,5 @@ and and short critical paths, and simplify the design.
 
 If you would like to see the source code (verilog/python), I can show you upon
 request.
+
+{{< scanlines >}}

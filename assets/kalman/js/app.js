@@ -124,8 +124,10 @@ function drawIntroText(ctx, canvas) {
   const isTouchDevice =
     "ontouchstart" in window || navigator.maxTouchPoints > 0;
   const text = isTouchDevice
-    ? "Tap and hold to draw"
-    : "Click and drag to draw";
+    ? "tap and hold to draw"
+    : "click and drag to draw";
+  ctx.font = "24px 'Iosevka'";
+  ctx.fillStyle = "#3c3836";
   ctx.fillText(text, canvas.offsetWidth / 2, canvas.offsetHeight / 2);
   ctx.restore();
 }

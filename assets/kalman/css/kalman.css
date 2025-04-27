@@ -11,8 +11,8 @@
 
 canvas {
     display: block;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: var(--color-fg0-h);
+    border: 1px solid var(--color-bg0);
     border-radius: 15px;
     position: absolute;
     top: 0;
@@ -32,22 +32,13 @@ canvas {
 
 .btn {
     align-items: center;
-    background-color: #ffffff;
+    background-color: var(--color-fg0-h);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 0.75rem;
-    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
     box-sizing: border-box;
-    color: rgba(0, 0, 0, 0.85);
     cursor: pointer;
     display: inline-flex;
-    font-family:
-        system-ui,
-        -apple-system,
-        system-ui,
-        "Helvetica Neue",
-        Helvetica,
-        Arial,
-        sans-serif;
+    font-family: "Iosevka";
     font-size: 12px;
     font-weight: 600;
     justify-content: center;
@@ -121,6 +112,7 @@ canvas {
     gap: 10px;
     width: 100%;
     align-items: center;
+    margin-top: 10px;
 }
 
 .slider-group {
@@ -174,11 +166,11 @@ input[type="range"].win10-thumb {
     --clip-edges: 0.0125em;
 }
 
-@media screen and (min-width: 965px) {
+/* @media screen and (min-width: 1000px) {
     .slider-group {
         grid-template-columns: 1fr 1fr;
     }
-}
+} */
 
 @media (prefers-color-scheme: dark) {
     html {
