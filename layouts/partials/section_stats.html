@@ -1,5 +1,45 @@
 <div class="section stats">
     <div class="header">
         <h2>stats</h2>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"
+            defer
+        ></script>
     </div>
+    <div class="stats content">
+        <div class="chart-section">
+            <h3>car energy</h3>
+            <div class="chart-container">
+                <canvas id="eventsChart"></canvas>
+                <p id="events-loading" class="loading-message">loading ...</p>
+                <p
+                    id="events-error"
+                    class="error-message"
+                    style="display: none"
+                ></p>
+            </div>
+        </div>
+
+        <div class="chart-section">
+            <h3>car odometer & lifetime energy</h3>
+            <div class="chart-container">
+                <canvas id="dailyStatsChart"></canvas>
+                <p id="stats-loading" class="loading-message">loading ...</p>
+                <p
+                    id="stats-error"
+                    class="error-message"
+                    style="display: none"
+                ></p>
+            </div>
+        </div>
+    </div>
+
+    {{ $js := resources.Get "tesla/js/app.js" | js.Build (dict "minify" true
+    "target" "es2016") | fingerprint }}
+    <script
+        src="{{ $js.RelPermalink }}"
+        integrity="{{ $js.Data.Integrity }}"
+        defer
+    ></script>
 </div>
