@@ -11,7 +11,7 @@
 
     <p>
         grad student @ ucsd studying intelligent systems, robotics & controls.
-        training for a triathalon
+        training for a triathalon. program enjoyer.
     </p>
 
     <ol class="menu-social">
@@ -63,8 +63,22 @@
 </div>
 
 <div sections>
-    {{ partial "section_posts.html" . }} {{ partial "section_stats.html" . }} {{
-    partial "section_work.html" . }}
+    <details open>
+        <summary>
+            <a href="/posts" onclick="event.stopPropagation();">posts</a>
+        </summary>
+        {{ partial "section_posts.html" . }}
+    </details>
+
+    <details>
+        <summary>data</summary>
+        {{ partial "section_stats.html" . }}
+    </details>
+
+    <details>
+        <summary>work</summary>
+        {{ partial "section_work.html" . }}
+    </details>
 </div>
 
 <script>

@@ -1,0 +1,19 @@
+.chart-section {
+    border: 2px solid var(--color-bg1);
+    /* border: 2px dashed green; */
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.chart-section p {
+    margin-top: 2px;
+    margin-left: 2px;
+    font-size: 18px;
+}
+
+.stats > div {
+    margin-bottom: 16px;
+}
+.stats > div:last-child {
+    margin-bottom: 0;
+}

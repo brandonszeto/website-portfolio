@@ -1,6 +1,7 @@
 <div class="section posts">
     <div class="header">
-        <h2>posts</h2>
+        {{ $css := resources.Get "posts/css/posts.css" | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ $css.Permalink }}" />
     </div>
     <div class="content">
         {{ range first 5 (where .Site.RegularPages "Type" "post") }}

@@ -1,0 +1,27 @@
+.posts {
+    color: var(--color-fg1);
+    text-decoration: none;
+    color: inherit;
+}
+
+.post {
+    font-size: 18px;
+    margin: 15px;
+}
+
+.post .date {
+    color: var(--color-gray);
+}
+
+.section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+summary a {
+}
+
+.posts a:hover {
+    color: inherit;
+    text-decoration: underline;
+}
