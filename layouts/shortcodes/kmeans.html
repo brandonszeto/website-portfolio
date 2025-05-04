@@ -4,9 +4,9 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>K-Means Canvas</title>
-        {{ $css := resources.Get "kmeans/css/kmeans.css" | minify |
-        fingerprint}}
-        <link rel="stylesheet" href="{{ $css.Permalink }}" />
+        {{ $sass := resources.Get "kmeans/scss/kmeans.scss" }} {{ $style :=
+        $sass | toCSS | minify | resources.Fingerprint "sha256" }}
+        <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
     </head>
     <body>
         <div class="container">
@@ -49,5 +49,7 @@
         <script src="{{ $js.Permalink }}"></script>
         {{ $js := resources.Get "kmeans/js/app.js" | js.Build | minify }}
         <script src="{{ $js.Permalink }}"></script>
+        {{ $js := resources.Get "js/slider.js" | js.Build | minify }}
+        <script type="module" src="{{ $js.Permalink }}"></script>
     </body>
 </html>

@@ -1,0 +1,84 @@
+@import "colors.scss";
+
+main {
+    margin-top: 10vh;
+    color: $color-fg2;
+
+    .post-title {
+        margin-bottom: 5vh;
+        h1 {
+            font-size: 2.5em;
+            color: $color-fg0;
+            margin-bottom: 0px;
+        }
+
+        time {
+            color: $color-fg4;
+        }
+    }
+
+    pre,
+    h2,
+    h3 {
+        position: relative;
+        padding-left: 1.5rem;
+        border-left: 3px solid $color-fg0;
+        color: $color-fg0;
+    }
+
+    .katex {
+        color: $color-fg0;
+    }
+
+    pre {
+        background: $color-bg2;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        overflow-x: auto;
+        font-size: 0.95rem;
+        font-family: "Iosevka", monospace;
+        line-height: 1.6;
+        background-image: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.02) 1px,
+            transparent 1px
+        );
+        background-size: 100% 1.5em;
+    }
+
+    code {
+        background: $color-bg2;
+        padding: 0.2em 0.5em;
+        border-radius: 4px;
+        font-family: "Iosevka", monospace;
+        font-size: 0.95em;
+        color: $color-fg0;
+    }
+
+    blockquote {
+        position: relative;
+        background: $color-bg0-h;
+        color: $color-fg0;
+        border-left: 4px solid $color-fg4;
+        padding: 1rem 1.5rem;
+        margin: 2rem 0;
+        font-family: "Iosevka", monospace;
+        font-size: 0.95rem;
+        background-size: 100% 1.5em;
+        border-radius: 4px;
+    }
+
+    blockquote code {
+        background: $color-bg2;
+        color: $color-fg0;
+        padding: 0.15em 0.5em;
+        border-radius: 4px;
+        color: $color-fg0;
+        font-family: "Iosevka", monospace;
+        font-size: 0.95em;
+    }
+
+    img {
+        border-radius: 4px;
+    }
+}

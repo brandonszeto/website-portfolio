@@ -1,0 +1,59 @@
+$color-bg0-h: #1d2021;
+$color-bg0: #282828;
+$color-bg1: #3c3836;
+$color-bg2: #504945;
+$color-bg3: #665c54;
+$color-bg4: #7c6f64;
+
+$color-fg0-h: #f9f5d7;
+$color-fg0: #fbf1c7;
+$color-fg1: #ebdbb2;
+$color-fg2: #d5c4a1;
+$color-fg3: #bdae93;
+$color-fg4: #a89984;
+
+$color-ac0: #cc241d;
+$color-ac0-h: #fb4934;
+$color-ac1: #98971a;
+$color-ac1-h: #b8bb26;
+$color-ac2: #d79921;
+$color-ac2-h: #fabd2f;
+$color-ac3: #458588;
+$color-ac3-h: #83a598;
+$color-ac4: #b16286;
+$color-ac4-h: #d3869b;
+$color-ac5: #689d6a;
+$color-ac5-h: #8ec07c;
+$color-ac6: #d65d0e;
+$color-ac6-h: #fe8019;
+
+:root {
+    --color-bg0-h: #{$color-bg0-h};
+    --color-bg0: #{$color-bg0};
+    --color-bg1: #{$color-bg1};
+    --color-bg2: #{$color-bg2};
+    --color-bg3: #{$color-bg3};
+    --color-bg4: #{$color-bg4};
+
+    --color-fg0-h: #{$color-fg0-h};
+    --color-fg0: #{$color-fg0};
+    --color-fg1: #{$color-fg1};
+    --color-fg2: #{$color-fg2};
+    --color-fg3: #{$color-fg3};
+    --color-fg4: #{$color-fg4};
+
+    --color-ac0: #{$color-ac0};
+    --color-ac0-h: #{$color-ac0-h};
+    --color-ac1: #{$color-ac1};
+    --color-ac1-h: #{$color-ac1-h};
+    --color-ac2: #{$color-ac2};
+    --color-ac2-h: #{$color-ac2-h};
+    --color-ac3: #{$color-ac3};
+    --color-ac3-h: #{$color-ac3-h};
+    --color-ac4: #{$color-ac4};
+    --color-ac4-h: #{$color-ac4-h};
+    --color-ac5: #{$color-ac5};
+    --color-ac5-h: #{$color-ac5-h};
+    --color-ac6: #{$color-ac6};
+    --color-ac6-h: #{$color-ac6-h};
+}

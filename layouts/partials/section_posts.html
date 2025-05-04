@@ -1,10 +1,8 @@
 <div class="section posts">
-    <div class="header">
-        {{ $css := resources.Get "posts/css/posts.css" | minify | fingerprint }}
-        <link rel="stylesheet" href="{{ $css.Permalink }}" />
-    </div>
+    <div class="header"></div>
     <div class="content">
-        {{ range first 5 (where .Site.RegularPages "Type" "post") }}
+        {{ range first 5 (where (where .Site.RegularPages "Type" "posts")
+        "Draft" "ne" true) }}
         <div class="post">
             <div class="line">
                 <span class="date">{{ .Date.Format "2006-01-02" }}</span>

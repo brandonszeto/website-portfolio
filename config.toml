@@ -1,0 +1,18 @@
+baseurl = "https://brandonszeto.com"
+languageCode = "en-us"
+theme = "brandon-theme"
+timeout = 100000
+
+[params]
+title = "brandon szeto"
+location = "la jolla, ca"
+subtitle = "grad student @ ucsd studying intelligent systems, robotics & controls. training for a triathalon."
+
+[module]
+[[module.mounts]]
+source = "assets"
+target = "assets"
+
+[[module.mounts]]
+source = "themes/brandon-theme/assets"
+target = "assets/theme"

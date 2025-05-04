@@ -1,0 +1,36 @@
+@import "colors.scss";
+
+.sections {
+    margin-top: 20vh;
+    h1 {
+        font-size: 2em;
+    }
+    .section {
+        margin: 20px;
+    }
+    .posts {
+        .content {
+            color: $color-fg1;
+            text-decoration: none;
+            color: inherit;
+            font-size: 1.2em;
+            .post {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                .line {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 10px;
+                    p {
+                        margin-top: 5px;
+                        margin-bottom: 5px;
+                    }
+                }
+                .date {
+                    color: $color-fg4;
+                }
+            }
+        }
+    }
+}

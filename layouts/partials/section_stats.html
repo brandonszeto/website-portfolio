@@ -1,7 +1,8 @@
 <div class="section stats">
     <div class="header">
-        {{ $css := resources.Get "tesla/css/tesla.css" | minify | fingerprint }}
-        <link rel="stylesheet" href="{{ $css.Permalink }}" />
+        {{ $sass := resources.Get "tesla/css/tesla.scss" }} {{ $style := $sass |
+        toCSS | minify | resources.Fingerprint "sha256" }}
+        <link rel="stylesheet" href="{{ $style.Permalink }}" />
         <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
         <script
             src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"
@@ -10,25 +11,24 @@
     </div>
     <div class="stats content">
         <div class="chart-section">
-            <p>🔋 energy</p>
-            <div class="chart-container">
-                <canvas id="eventsChart"></canvas>
-                <p id="events-loading" class="loading-message">loading ...</p>
-                <p
-                    id="events-error"
-                    class="error-message"
-                    style="display: none"
-                ></p>
-            </div>
-        </div>
-
-        <div class="chart-section">
             <p>🚘 odometer and lifetime energy</p>
             <div class="chart-container">
                 <canvas id="dailyStatsChart"></canvas>
                 <p id="stats-loading" class="loading-message">loading ...</p>
                 <p
                     id="stats-error"
+                    class="error-message"
+                    style="display: none"
+                ></p>
+            </div>
+        </div>
+        <div class="chart-section">
+            <p>🔋 energy change</p>
+            <div class="chart-container">
+                <canvas id="eventsChart"></canvas>
+                <p id="events-loading" class="loading-message">loading ...</p>
+                <p
+                    id="events-error"
                     class="error-message"
                     style="display: none"
                 ></p>

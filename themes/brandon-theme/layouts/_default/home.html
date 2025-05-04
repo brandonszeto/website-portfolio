@@ -1,0 +1,65 @@
+{{ define "head" }} {{ $sass := resources.Get "scss/home/style.scss" }} {{
+$style := $sass | toCSS | minify | resources.Fingerprint "sha256" }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+{{ end }} {{ define "main" }}
+<section class="hero">
+    <h1>{{ .Site.Params.title }}</h1>
+    <p class="location">
+        <span class="icon inline-icon">{{ partial "icon.html" "pin" }}</span>
+        {{ .Site.Params.location }}
+    </p>
+    <p class="subtitle">{{ .Site.Params.subtitle }}</p>
+    <ul class="icon-list">
+        <li>
+            <a
+                href="https://github.com/brandonszeto"
+                class="icon github"
+                target="_blank"
+                rel="noopener"
+            >
+                {{ partial "icon.html" "github" }}
+            </a>
+        </li>
+        <li>
+            <a
+                href="https://www.linkedin.com/in/brandon-szeto"
+                class="icon linkedin"
+                target="_blank"
+                rel="noopener"
+            >
+                {{ partial "icon.html" "linkedin" }}
+            </a>
+        </li>
+        <li>
+            <a
+                href="https://twitter.com/brandonszeto1"
+                class="icon x"
+                target="_blank"
+                rel="noopener"
+            >
+                {{ partial "icon.html" "x" }}
+            </a>
+        </li>
+    </ul>
+</section>
+
+<div sections>
+    <details open>
+        <summary>
+            <a href="/posts" onclick="event.stopPropagation();">posts</a>
+        </summary>
+        {{ partial "section_posts.html" . }}
+    </details>
+
+    <details open>
+        <summary>data</summary>
+        {{ partial "section_stats.html" . }}
+    </details>
+
+    <!-- <details>
+        <summary>work</summary>
+        {{ partial "section_work.html" . }}
+    </details> -->
+</div>
+
+{{ end }}

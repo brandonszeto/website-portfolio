@@ -25,19 +25,19 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- Retrieve Theme Styles from CSS ---
   const themeStyles = {
     fontFamily: getCssVariable("--article-font-family"),
-    textColor: getCssVariable("--color-gray"),
+    textColor: getCssVariable("--color-fg4"),
     titleColor: getCssVariable("--color-fg1"),
     gridColor: getCssVariable("--color-bg0"),
     tooltipBg: getCssVariable("--color-bg1"),
     tooltipTextColor: getCssVariable("--color-fg1"),
-    energyChargeColor: getCssVariable("--color-green"),
-    energyChargeBg: getCssVariable("--color-green-light"),
-    energyDriveColor: getCssVariable("--color-red"),
-    energyDriveBg: getCssVariable("--color-red-light"),
-    odometerColor: getCssVariable("--color-blue"),
-    odometerBg: getCssVariable("--color-blue-light"),
-    lifetimeEnergyColor: getCssVariable("--color-green"),
-    lifetimeEnergyBg: getCssVariable("--color-green-light"),
+    energyChargeColor: getCssVariable("--color-ac1"),
+    energyChargeBg: getCssVariable("--color-ac1-h"),
+    energyDriveColor: getCssVariable("--color-ac0"),
+    energyDriveBg: getCssVariable("--color-ac0-h"),
+    odometerColor: getCssVariable("--color-ac3"),
+    odometerBg: getCssVariable("--color-ac3-h"),
+    lifetimeEnergyColor: getCssVariable("--color-ac1"),
+    lifetimeEnergyBg: getCssVariable("--color-ac1-h"),
   };
 
   // --- Optional: Set Global Chart Defaults ---
@@ -107,7 +107,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // ... (end of existing logic)
   };
 
-  // Function to render the events bar chart (UPDATED with styling)
   const renderEventsChart = (canvas, labels, data) => {
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
@@ -135,6 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 : themeStyles.energyDriveColor,
             ),
             borderWidth: 1,
+            barPercentage: 1.0,
           },
         ],
       },
@@ -157,15 +157,11 @@ document.addEventListener("DOMContentLoaded", () => {
               minRotation: 45,
               autoSkip: true,
               maxTicksLimit: 20,
-              color: themeStyles.textColor, // Style x-axis ticks
-              font: {
-                // You can specify font details here if needed,
-                // otherwise it uses Chart.defaults.font
-                // family: themeStyles.fontFamily (already default)
-              },
+              color: themeStyles.textColor,
+              font: {},
             },
             grid: {
-              color: themeStyles.gridColor, // Style x-axis grid lines
+              color: themeStyles.gridColor,
             },
           },
           y: {
@@ -173,36 +169,32 @@ document.addEventListener("DOMContentLoaded", () => {
             title: {
               display: true,
               text: "energy change (kWh)",
-              color: themeStyles.titleColor, // Style y-axis title
+              color: themeStyles.titleColor,
               font: {
-                // family: themeStyles.fontFamily (already default)
-                weight: "bold", // Example: make title bold
+                weight: "bold",
               },
             },
             ticks: {
-              color: themeStyles.textColor, // Style y-axis ticks
+              color: themeStyles.textColor,
               callback: function (value) {
                 return value + " kWh";
               },
             },
             grid: {
-              color: themeStyles.gridColor, // Style y-axis grid lines
+              color: themeStyles.gridColor,
             },
           },
         },
         plugins: {
           legend: {
-            // Optional: Style legend if needed
             labels: {
-              color: themeStyles.textColor, // Style legend text
-              // font: { ... }
+              color: themeStyles.textColor,
             },
           },
           tooltip: {
             backgroundColor: themeStyles.tooltipBg,
             titleColor: themeStyles.tooltipTextColor,
             bodyColor: themeStyles.tooltipTextColor,
-            // titleFont, bodyFont can also be set here if needed
             callbacks: {
               title: function (tooltipItems) {
                 const date = tooltipItems[0].parsed.x;
@@ -414,7 +406,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       hideMessage(eventsErrorElement);
-      showMessage(eventsLoadingElement, "Loading Events Data...");
+      showMessage(eventsLoadingElement, "Loading ...");
       const response = await fetch(
         `${baseUrl}/tesla/events/all?${eventParams.toString()}`,
       );
@@ -443,7 +435,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       hideMessage(statsErrorElement);
-      showMessage(statsLoadingElement, "Loading Daily Stats Data...");
+      showMessage(statsLoadingElement, "Loading ...");
       const response = await fetch(
         `${baseUrl}/tesla/daily_stats/all?${statsParams.toString()}`,
       );

@@ -1,0 +1,10 @@
+{{ define "header" }} {{ partial "header.html" . }} {{ end }} {{ define "head"
+}} {{ $sass := resources.Get "scss/list.scss" }} {{ $style := $sass | toCSS |
+minify | resources.Fingerprint "sha256" }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+{{ end }} {{ define "main" }}
+<div class="sections">
+    <h1>{{ .Title }}</h1>
+    {{ partial "section_posts.html" . }}
+</div>
+{{ end }}

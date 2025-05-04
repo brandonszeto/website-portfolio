@@ -18,6 +18,22 @@ let centroids = [];
 let numCentroids = 0;
 let std = 25;
 let numPointsCloud = 100;
+let hasDrawn = false;
+
+function drawIntroText(ctx, canvas) {
+  ctx.save();
+  ctx.fillStyle = "rgba(0, 0, 0, 0.7)";
+  ctx.font = "16px sans-serif";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  const isTouchDevice =
+    "ontouchstart" in window || navigator.maxTouchPoints > 0;
+  const text = isTouchDevice ? "tap to draw" : "click to draw";
+  ctx.font = "24px 'Iosevka'";
+  ctx.fillStyle = "#3c3836";
+  ctx.fillText(text, canvas.offsetWidth / 2, canvas.offsetHeight / 2);
+  ctx.restore();
+}
 
 function toggleCentroid() {
   drawingCentroid = !drawingCentroid;
@@ -52,6 +68,8 @@ window.onload = function () {
   ctx = canvas.getContext("2d");
   setupCanvas(canvas, ctx);
 
+  drawIntroText(ctx, canvas);
+
   cursorCanvas = document.getElementById("cursorCanvas");
   cursorCtx = cursorCanvas.getContext("2d");
   setupCanvas(cursorCanvas, cursorCtx);
@@ -79,6 +97,11 @@ window.onload = function () {
   });
 
   cursorCanvas.addEventListener("mousedown", function (event) {
+    if (!hasDrawn) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      hasDrawn = true;
+    }
+
     if (drawingCentroid) {
       addCentroid(event, ctx, centroids, numCentroids);
     } else if (drawingGaussian) {
