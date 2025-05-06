@@ -13,25 +13,24 @@
 
     <div class="stats content">
         <div class="chart-section">
-            <p>🚘 odometer and lifetime energy</p>
+            <p>🔋 Battery Percentage</p>
             <div class="chart-container">
-                <canvas id="dailyStatsChart"></canvas>
-                <p id="stats-loading" class="loading-message">Loading ...</p>
+                <canvas id="batteryPercentageChart"></canvas>
+                <p id="battery-loading" class="loading-message">Loading ...</p>
                 <p
-                    id="stats-error"
+                    id="battery-error"
                     class="error-message"
                     style="display: none"
                 ></p>
             </div>
         </div>
-
         <div class="chart-section">
-            <p>🔋 energy change</p>
+            <p>🚘 Odometer</p>
             <div class="chart-container">
-                <canvas id="eventsChart"></canvas>
-                <p id="events-loading" class="loading-message">Loading ...</p>
+                <canvas id="dailyStatsChart"></canvas>
+                <p id="stats-loading" class="loading-message">Loading ...</p>
                 <p
-                    id="events-error"
+                    id="stats-error"
                     class="error-message"
                     style="display: none"
                 ></p>
