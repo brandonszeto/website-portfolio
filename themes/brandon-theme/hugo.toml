@@ -17,6 +17,11 @@ name = 'Data'
 pageRef = '/data'
 weight = 30
 
+[[menus.main]]
+name = 'CV'
+pageRef = '/cv'
+weight = 40
+
 [module]
 [module.hugoVersion]
 extended = false

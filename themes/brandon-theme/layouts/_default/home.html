@@ -1,6 +1,8 @@
-{{ define "head" }} {{ $sass := resources.Get "scss/home/style.scss" }} {{
-$style := $sass | toCSS | minify | resources.Fingerprint "sha256" }}
+{{ define "header" }} {{ partial "header.html" . }} {{ end }} {{ define "head"
+}} {{ $sass := resources.Get "scss/home/style.scss" }} {{ $style := $sass |
+toCSS | minify | resources.Fingerprint "sha256" }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+
 {{ end }} {{ define "main" }}
 <section class="hero">
     <h1>{{ .Site.Params.title }}</h1>
@@ -48,18 +50,15 @@ $style := $sass | toCSS | minify | resources.Fingerprint "sha256" }}
         <summary>
             <a href="/posts" onclick="event.stopPropagation();">posts</a>
         </summary>
-        {{ partial "section_posts.html" . }}
+        {{ partial "section_list.html" (dict "site" .Site "section" "posts") }}
     </details>
 
     <details open>
-        <summary>data</summary>
-        {{ partial "section_stats.html" . }}
+        <summary>
+            <a href="/data" onclick="event.stopPropagation();">data</a>
+        </summary>
+        {{ partial "section_list.html" (dict "site" .Site "section" "data") }}
     </details>
-
-    <!-- <details>
-        <summary>work</summary>
-        {{ partial "section_work.html" . }}
-    </details> -->
 </div>
 
 {{ end }}

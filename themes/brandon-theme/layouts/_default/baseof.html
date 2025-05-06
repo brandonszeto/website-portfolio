@@ -4,11 +4,17 @@
     dir="{{ or site.Language.LanguageDirection `ltr` }}"
 >
     <head>
+        {{ $sass := resources.Get "scss/style.scss" }} {{ $style := $sass |
+        toCSS | minify | resources.Fingerprint "sha256" }}
+        <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
         {{ partial "head/head.html" . }} {{ block "head" . }}{{ end }}
     </head>
     <body>
         <header>{{ block "header" . }}{{ end }}</header>
         <main>{{ block "main" . }}{{ end }}</main>
         <footer>{{ block "footer" . }}{{ end }}</footer>
+
+        {{ $js := resources.Get "js/nav.js" | js.Build | minify }}
+        <script type="module" src="{{ $js.Permalink }}"></script>
     </body>
 </html>

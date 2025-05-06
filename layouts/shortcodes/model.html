@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Three.js Sandbox</title>
+
+        {{ $sass := resources.Get "tesla/css/tesla.scss" }} {{ $style := $sass |
+        toCSS | minify | resources.Fingerprint "sha256" }}
+        <link rel="stylesheet" href="{{ $style.Permalink }}" />
+    </head>
+    <body>
+        <div id="three-container"></div>
+
+        {{ $js := resources.Get "tesla/js/model.js" | js.Build | minify }}
+        <script type="module" src="{{ $js.Permalink }}"></script>
+    </body>
+</html>

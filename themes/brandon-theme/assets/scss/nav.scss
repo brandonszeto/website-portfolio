@@ -1,0 +1,115 @@
+@import "colors.scss";
+@import "fonts.scss";
+
+// --- Variables ---
+$nav-transition-speed: 0.25s;
+
+// --- Header Bar Styles (Full Width Flex Container) ---
+header {
+    display: flex; // Arrange button and nav horizontally
+    justify-content: space-between; // Push button left, nav right
+    align-items: center; // Vertically center items in the bar
+    width: 100%; // Full viewport width
+    padding: 0.5em 1em; // Vertical padding, horizontal padding for ends
+    box-sizing: border-box; // Include padding in the 100% width
+    background-color: $color-bg0;
+    /* border-bottom: 1px solid $color-fg4; */
+    position: relative; // Or fixed/sticky if needed
+    z-index: 100;
+    min-height: 60px; // Ensure consistent height
+}
+
+// --- Menu Toggle Button Styles (Flex Item 1) ---
+#menu-toggle {
+    // No absolute positioning needed anymore
+    background: none;
+    border: none;
+    padding: 0.5em; // Clickable area
+    margin: 0; // Reset margin
+    cursor: pointer;
+    z-index: 102; // Ensure button is clickable
+
+    // Hamburger/X styles (same as before)
+    span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: $color-fg0;
+        margin: 5px 0;
+        transition: all $nav-transition-speed ease-in-out;
+    }
+    &[aria-expanded="true"] {
+        span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        span:nth-child(2) {
+            opacity: 0;
+        }
+        span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    }
+}
+
+// --- Nav Container Styles (Flex Item 2 - Toggled) ---
+nav#main-nav {
+    // No absolute positioning needed
+    // --- Hiding Mechanism ---
+    display: none; // Hidden by default
+
+    // --- Styles when OPEN ---
+    &.is-open {
+        display: block; // Show the nav container
+    }
+
+    // UL holds the horizontal links
+    ul {
+        display: flex; // Arrange LIs horizontally
+        align-items: center; // Align items vertically if needed
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 1em; // Add space BETWEEN the links (adjust as needed)
+
+        li {
+            margin: 0; // Reset LI margin
+
+            a {
+                display: block;
+                padding: 0.5em 0.8em; // Adjust padding for horizontal look
+                text-decoration: none;
+                color: $color-fg0;
+                font-family: $body-font-family;
+                transition:
+                    background-color 0.2s ease-in-out,
+                    color 0.2s ease-in-out;
+
+                &:hover {
+                    color: $color-fg0;
+                    background-color: $color-bg2;
+                }
+
+                // Active/Ancestor styling
+                &[aria-current="page"],
+                &.active,
+                &.ancestor {
+                    color: $color-fg0;
+                    font-weight: bold;
+                    background-color: transparent; // Usually no bg for active in this style
+                }
+
+                // Non-link styling
+                &:not([href]) {
+                    color: $color-fg4;
+                    cursor: default;
+                    font-weight: normal;
+                    background-color: transparent;
+                    &:hover {
+                        background-color: transparent;
+                        color: $color-fg4;
+                    }
+                }
+            }
+        }
+    }
+}

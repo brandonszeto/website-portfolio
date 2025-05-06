@@ -1,0 +1,19 @@
+{{ $section := .section | default "" }} {{ $site := .site | default .Site }}
+
+<div class="section posts">
+    <div class="header"></div>
+    <div class="content">
+        {{ $pages := $site.RegularPages }} {{ if $section }} {{ $pages = where
+        $pages "Section" $section }} {{ end }} {{ range first 5 (where $pages
+        "Draft" "ne" true) }}
+        <div class="post">
+            <div class="line">
+                <span class="date">{{ .Date.Format "2006-01-02" }}</span>
+                <span class="title">
+                    <a href="{{ .RelPermalink }}">{{ lower .Title }}</a>
+                </span>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</div>
