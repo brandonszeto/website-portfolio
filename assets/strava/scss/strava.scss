@@ -1,0 +1,15 @@
+@import "../../scss/colors.scss";
+@import "../../scss/fonts.scss";
+
+#chartContainer {
+    width: 90%; /* Slightly wider for smaller screens */
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#errorMessage {
+    color: red;
+    margin-top: 20px;
+    font-weight: bold;
+}

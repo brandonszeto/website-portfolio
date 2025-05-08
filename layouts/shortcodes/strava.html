@@ -1,0 +1,31 @@
+{{ $sass := resources.Get "strava/scss/strava.scss" }} {{ $style := $sass |
+toCSS | minify | resources.Fingerprint "sha256" }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" />
+
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+<!-- Date adapter for Chart.js -->
+
+<div id="heatmapContainer" style="height: 400px; margin-bottom: 30px">
+    <canvas id="activityHeatmapChart"></canvas>
+</div>
+
+<div id="cumulativeStatsContainer" style="height: 450px; margin-bottom: 30px">
+    <canvas id="cumulativeStatsChart"></canvas>
+</div>
+
+<div id="chartContainer" style="height: 400px; margin-bottom: 30px">
+    <canvas id="activityPieChart"></canvas>
+</div>
+
+<div id="errorMessage" style="color: red; margin-top: 10px"></div>
+
+<!-- App JS -->
+{{ $js := resources.Get "strava/js/app.js" | js.Build (dict "minify" true
+"target" "es2016") | fingerprint }}
+<script
+    src="{{ $js.RelPermalink }}"
+    integrity="{{ $js.Data.Integrity }}"
+    defer
+></script>

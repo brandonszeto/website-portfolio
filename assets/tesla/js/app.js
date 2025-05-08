@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const themeStyles = {
-    fontFamily: getCssVariable("--article-font-family"),
+    fontFamily: getCssVariable("--body-font-family"),
     textColor: getCssVariable("--color-fg4"),
     titleColor: getCssVariable("--color-fg1"),
     gridColor: getCssVariable("--color-bg0"),
