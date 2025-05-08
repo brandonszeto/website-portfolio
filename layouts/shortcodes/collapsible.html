@@ -1,4 +1,4 @@
-<details>
+<details {{ if .Get "open" }}open{{ end }}>
   <summary>{{ .Get "title" }}</summary>
   <div>
     {{ .Inner | markdownify }}
